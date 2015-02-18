@@ -9,8 +9,7 @@ import XMonad.Layout.Spacing
 import XMonad.Config.Gnome
 import XMonad.Layout.Fullscreen
 import XMonad.Layout.NoBorders
-
-    
+   
 myLayout = avoidStruts  (tiled ||| Mirror tiled ||| Full) ||| noBorders (fullscreenFull Full)  
      where  
        -- default tiling algorithm partitions the screen into two panes  
@@ -39,17 +38,15 @@ main = do
                         { ppOutput = hPutStrLn xmproc
                         , ppTitle = xmobarColor "green" "" . shorten 50
                         },
-        
+          
           terminal = "gnome-terminal",
           focusFollowsMouse  = False,
           keys =    keys defaultConfig,
           modMask = mod4Mask     -- Rebind Mod to the Windows key
         } `additionalKeys` morekeys
 
-
-morekeys = [
-
- 
+morekeys :: [((KeyMask, KeySym), X())]
+morekeys = [ 
        ((mod4Mask .|. shiftMask, xK_z), spawn "xscreensaver-command -lock"),
 
        -- print screens
