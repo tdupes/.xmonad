@@ -10,7 +10,10 @@ import XMonad.Config.Gnome
 import XMonad.Layout.Fullscreen  (fullscreenEventHook, fullscreenManageHook, fullscreenFull, fullscreenFloat)
 import XMonad.Hooks.ManageHelpers (doCenterFloat, (/=?), isInProperty, isFullscreen, (-?>), doFullFloat, composeOne)
 import XMonad.Layout.NoBorders
+import XMonad.Hooks.SetWMName
+import XMonad.Actions.WindowGo
 
+    
 myLayout = avoidStruts  (tiled ||| smallspacing ||| Mirror tiled ||| Full) ||| noBorders (fullscreenFull Full)
      where
        -- default tiling algorithm partitions the screen into two panes
@@ -45,6 +48,7 @@ main = do
     xmproc <- spawnPipe "/usr/bin/xmobar /home/thomasduplessis/.xmobarrc"
     --when load up set my background
     spawn "feh --bg-scale /home/thomasduplessis/Pictures/colorful-triangles-background.jpg &"
+    spawn "emacs"
     xmonad $ defaultConfig
         {
           manageHook =  myManageHook <+> manageDocks,
@@ -53,13 +57,14 @@ main = do
           logHook = dynamicLogWithPP xmobarPP
                         { ppOutput = hPutStrLn xmproc
                         , ppTitle = xmobarColor "green" "" . shorten 50
-                        },
+                        } ,
 
           terminal = "urxvt",
           focusFollowsMouse  = True,
           focusedBorderColor = mybordercolor,
           keys =    keys defaultConfig,
           modMask = mod4Mask     -- Rebind Mod to the Windows key
+          , startupHook = setWMName "LG3D"
         } `additionalKeys` morekeys
 
 morekeys :: [((KeyMask, KeySym), X())]
@@ -89,9 +94,20 @@ morekeys = [
        ((mod4Mask .|. shiftMask, xK_l), spawn "pmi action logout"),
        ((mod4Mask .|. shiftMask, xK_s), spawn "pmi action suspend"),
        ((mod4Mask .|. shiftMask, xK_h), spawn "pmi action hibernate"),
-       ((mod4Mask .|. shiftMask, xK_p), spawn "sudo poweroff;t79509121"),
-
+       ((myModMask, xk_e) , runOrRaise emacs (className =? "emacs")),
+       ((myModMask , xK_f), runOrRaise myBrowser (className =? "Firefox")),
        --switch workspaces
        ((mod4Mask .|. controlMask, xK_Right), shiftToNext >> nextWS),
        ((mod4Mask .|. controlMask, xK_Left),   shiftToPrev >> prevWS)
     ]
+
+mymodmask = mod4Mask
+emacs = "emacs"
+myBrowser = "firefox"
+myVolumeUp = "amixer set Master 10+ " -- && volume_popup.sh"
+myVolumeDown = "amixer set Master 10-  " -- && volume_popup.sh"
+myToggleMute = "amixer set Master toggle  " -- && volume_popup.sh"
+myDisplayBrightnessUp = "xbacklight -inc 10  " -- && backlight_popup.sh"
+myDisplayBrightnessDown = "xbacklight -dec 10  " -- && backlight_popup.sh"
+myKeyboardBrightnessUp = "kbdlight up"
+myKeyboardBrightnessDown = "kbdlight down"
