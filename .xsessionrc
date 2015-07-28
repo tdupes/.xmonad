@@ -1,4 +1,4 @@
 
-feh --bg-scale /home/thomasduplessis/Pictures/solarized.jpg &
+feh --bg-scale /home/tom/Pictures/Lake-Mountain.jpg &
 
 exec xmonad 
