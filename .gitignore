@@ -6,3 +6,4 @@ TAGS
 dist/
 *.o
 *.swp
+xmonad-x86_64-linux
