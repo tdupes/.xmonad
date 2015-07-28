@@ -1,0 +1,19 @@
+{
+   "gmailcheck_description": {
+      "message": "Zobrazí počet neprečítaných správ v priečinku doručenej pošty v službe Gmail. Kliknutím na tlačidlo priečinok doručenej pošty otvoríte."
+   },
+   "gmailcheck_exception": {
+      "message": "výnimka: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "gmailcheck_name": {
+      "message": "Kontrola pošty Google"
+   },
+   "gmailcheck_node_error": {
+      "message": "Chyba: informačný kanál bol načítaný, nenašiel sa však žiadny uzol &lt;fullcount&gt;."
+   }
+}

@@ -1,0 +1,19 @@
+{
+   "gmailcheck_description": {
+      "message": "Відображає кількість непрочитаних повідомлень у папці з вхідними повідомленнями служби Google Mail. Щоб відкрити папку з вхідними повідомленнями, можна також натиснути цю кнопку."
+   },
+   "gmailcheck_exception": {
+      "message": "виняток: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "gmailcheck_name": {
+      "message": "Перевірка пошти Google"
+   },
+   "gmailcheck_node_error": {
+      "message": "Помилка: канал відновлено, але жодного вузла &lt;fullcount&gt; не знайдено"
+   }
+}

@@ -1,0 +1,19 @@
+{
+   "gmailcheck_description": {
+      "message": "आपके Google मेल इनबॉक्स में न पढ़े गए संदेशों की संख्या प्रदर्शित करता है. आप अपना इनबॉक्स खोलने के लिए बटन क्लिक भी कर सकते हैं."
+   },
+   "gmailcheck_exception": {
+      "message": "अपवाद: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "gmailcheck_name": {
+      "message": "Google मेल जांचकर्ता"
+   },
+   "gmailcheck_node_error": {
+      "message": "त्रुटि: फ़ीड पुनर्प्राप्त की गई, लेकिन कोई &lt;fullcount&gt; नोड नहीं मिला"
+   }
+}

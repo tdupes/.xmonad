@@ -1,0 +1,19 @@
+{
+   "gmailcheck_description": {
+      "message": "Apresenta o número de mensagens não lidas existentes na sua caixa de entrada do Google Mail. Pode também clicar no botão para abrir a caixa de entrada."
+   },
+   "gmailcheck_exception": {
+      "message": "excepção: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "gmailcheck_name": {
+      "message": "Verificador do Google Mail"
+   },
+   "gmailcheck_node_error": {
+      "message": "Erro: obteve-se o feed, mas não foi encontrado nenhum nó &lt;fullcount&gt;"
+   }
+}

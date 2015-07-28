@@ -1,0 +1,5 @@
+T 1407637938 19*	Now talking on 22#bitcoin-dev
+T 1407637938 22*	Topic for 22#bitcoin-dev is: Development of Bitcoin; This is for discussion about the Bitcoin network and reference software  between developers. | http://bitcoin.org/ https://en.bitcoin.it/wiki/ | This channel is logged: http://bitcoinstats.com/   | There is no from address | No altcoin/bc.i/mtgox/bitstamp support | tell us what you're trying to do, not how you're  trying to do it
+T 1407637938 22*	Topic for 22#bitcoin-dev set by 26closer!~eV9kqKUNT@jenkins.closure.jp (24Thu Jul 17 18:52:28 2014)
+T 1407637975 FiSHLiM plugin unloaded
+T 1407637975 Python interface unloaded

@@ -1,0 +1,19 @@
+{
+   "gmailcheck_description": {
+      "message": "Muestra el número de mensajes sin leer en tu bandeja de entrada de Google Mail. También puedes hacer clic en el botón para abrir tu bandeja de entrada."
+   },
+   "gmailcheck_exception": {
+      "message": "excepción: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "gmailcheck_name": {
+      "message": "Google Mail Checker"
+   },
+   "gmailcheck_node_error": {
+      "message": "Error: se recuperó el feed, pero no se encontró el nodo &lt;fullcount&gt;"
+   }
+}

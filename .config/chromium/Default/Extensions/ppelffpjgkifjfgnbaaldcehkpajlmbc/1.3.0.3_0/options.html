@@ -1,0 +1,211 @@
+<!--///////////////////////////////////////////////////////////////////////
+//                                                                       //
+//   iReader! (c) 2010 Samabox. All rights reserved.                     //
+//                                                                       //
+////////////////////////////////////////////////////////////////////////-->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>iReader Options</title>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<link rel="shortcut icon" type="image/png" href="assets/images/icon-16.png"/>
+	<link rel="stylesheet" href="assets/styles/options.css" type="text/css">
+	<link rel="stylesheet" href="assets/styles/infoTip.css" type="text/css">
+	<script src="assets/libs/jquery-1.4.min.js" type="text/javascript"></script>
+	<script src="assets/scripts/options.js" type="text/javascript"></script>
+	<script src="assets/scripts/infoTip.js" type="text/javascript"></script>
+</head>
+<body onload="init()">
+<div id="optionsContainer">
+	<div id="header">
+		<img src="assets/images/icon-128.png" width="60" height="60" class="title" alt="Logo" />
+		<span class="title"><b>iReader</b> Options</span>
+	</div>
+	<div id="body">
+	<table width="100%">
+	<tr>
+	<td valign="top">
+		<div id="tabRulesBody" class="tab">
+			<div class="title optionGroupHeader">
+				<span>Reader</span>
+			</div>
+			<table id="connectionsTablex" class="optionGroup">
+				<tr class="option">
+					<td>Background Opacity</td>
+					<td>
+						<span>10%</span> &nbsp;
+						<input id="txtBackgroundOpacity" type="range" min="10" max="100" step="10">
+						&nbsp; <span>100%</span>
+					</td>
+				</tr>
+				<tr class="option">
+					<td>
+						<label>
+							<input id="chkHotkey" type="checkbox">&nbsp;
+							<span>Hotkey</span>
+						</label>
+					</td>
+					<td>
+						<input id="txtHotkey" type="text" disabled="true" onkeypress="return false;"
+							oncopy="return false;" onpaste="return false;" oncut="return false;">
+					</td>
+				</tr>
+				<tr class="option">
+					<td></td>
+					<td>
+						<label>
+							<div>
+								<input id="chkUseGmail" type="checkbox">&nbsp; 
+								<span>Mail Articles from Gmail</span>
+							</div>
+						</label>
+					</td>
+				</tr>
+				<tr class="option">
+					<td></td>
+					<td>
+						<label>
+							<div>
+								<input id="chkSmoothScroll" type="checkbox">&nbsp; 
+								<span>Smooth Scroll</span>
+							</div>
+						</label>
+					</td>
+				</tr>
+				<!--tr class="option">
+					<td></td>
+					<td>
+						<label>
+							<div>
+								<input id="chkAnimations" type="checkbox">&nbsp; 
+								<span>Disable Animations</span>
+							</div>
+						</label>
+					</td>
+				</tr-->
+			</table>
+			<br />
+			
+			<div class="title optionGroupHeader">
+				<span>Article Style</span>
+			</div>
+			<table id="proxyChangesTable" class="optionGroup">
+				<tr class="option">
+					<td>
+						<label>Font Family</label>
+					</td>
+					<td>
+						<select id="cmbFontFamily">
+							<option value="Book Antiqua" style="font-family: Verdana">Book Antiqua</option>
+							<option value="Cambria">Cambria</option>
+							<option value="Georgia">Georgia</option>
+							<option value="Palatino">Palatino</option>
+							<option value="Segoe UI">Segoe UI</option>
+							<option value="Tahoma">Tahoma</option>
+							<option value="Times New Roman">Times New Roman</option>
+							<option value="Verdana">Verdana</option>
+						</select>
+					</td>
+				</tr>
+				<tr class="option">
+					<td>Article Width</td>
+					<td>
+						<select id="cmbArticleWidth">
+							<option value="50%">Narrow</option>
+							<option value="70%">Normal</option>
+							<option value="90%">Wide</option>
+						</select>
+					</td>
+				</tr>
+				<tr class="option">
+					<td>Article Margin</td>
+					<td>
+						<select id="cmbArticleMargin">
+							<option value="5%">Narrow</option>
+							<option value="10%">Normal</option>
+							<option value="20%">Wide</option>
+						</select>
+					</td>
+				</tr>
+				<tr class="option">
+					<td></td>
+					<td>
+						<label>
+							<div>
+								<input id="chkJustifyText" type="checkbox">&nbsp; 
+								<span>Justify Text</span>
+							</div>
+						</label>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</td>
+	<td width="300" valign="top" id="preview">
+		<div class="title optionGroupHeader">
+			<span>Preview</span>
+		</div>
+		<div class="body">
+			<div class="background">
+				<p>
+				iReader allows you to view news stories and other articles 
+				in a single clutter-free page.<br />
+				It strips out the ads and extraneous layout and displays 
+				the article in a very easy to read, scrollable display.
+				</p>
+				<p>
+				iReader allows you to view news stories and other articles 
+				in a single clutter-free page.<br />
+				It strips out the ads and extraneous layout and displays 
+				the article in a very easy to read, scrollable display.
+				</p>
+				<p>
+				iReader allows you to view news stories and other articles 
+				in a single clutter-free page.<br />
+				It strips out the ads and extraneous layout and displays 
+				the article in a very easy to read, scrollable display.
+				</p>
+			</div>
+			<table class="optionGroup">
+				<tr>
+					<td>
+						<div class="page">
+							<div>
+								<h4>iReader</h4>
+								<p>
+								iReader allows you to view news stories and other articles 
+								in a single clutter-free page.<br />
+								It strips out the ads and extraneous layout and displays 
+								the article in a very easy to read, scrollable display.
+								</p>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</td>
+	</tr>
+	</table>
+	</div>
+
+	<div id="control" class="control">
+		<table>
+			<tr>
+				<td width="100%"><span id="version">v1.2</span></td>
+				<td>
+					<button id="btnSave" class="button bold" shortcut="S" onclick="saveOptions();">Save</button>
+				</td>
+				<td>&nbsp;&nbsp;</td>
+				<td>
+					<button id="btnClose" class="button" shortcut="X" onclick="closeWindow();">Close</button>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<br />
+	
+	<div id="copyright">Copyright &copy; 2010 Samabox. All rights reserved.</div>
+</div>
+</body>
+</html>

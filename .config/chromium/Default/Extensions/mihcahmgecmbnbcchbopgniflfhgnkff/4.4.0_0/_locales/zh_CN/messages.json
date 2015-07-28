@@ -1,0 +1,19 @@
+{
+   "gmailcheck_description": {
+      "message": "显示 Google Mail 收件箱中的未读邮件数。点击该按钮还可以打开您的收件箱。"
+   },
+   "gmailcheck_exception": {
+      "message": "异常：$1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "gmailcheck_name": {
+      "message": "Google Mail Checker"
+   },
+   "gmailcheck_node_error": {
+      "message": "错误：系统已检索供稿，但未发现 &lt;fullcount&gt; 节点"
+   }
+}

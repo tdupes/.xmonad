@@ -1,0 +1,14 @@
+2015/04/21-17:03:57.645 31144 Reusing MANIFEST /home/thomasduplessis/.config/google-chrome/Default/Session Storage/MANIFEST-000172
+2015/04/21-17:03:57.646 31144 Recovering log #219
+2015/04/21-17:03:57.646 31144 Level-0 table #221: started
+2015/04/21-17:03:57.718 31144 Level-0 table #221: 686 bytes OK
+2015/04/21-17:03:57.784 31144 Delete type=0 #219
+2015/04/21-17:03:57.785 31267 Compacting 4@0 + 1@1 files
+2015/04/21-17:03:57.840 31267 Generated table #223: 2281 keys, 57862 bytes
+2015/04/21-17:03:57.840 31267 Compacted 4@0 + 1@1 files => 57862 bytes
+2015/04/21-17:03:57.917 31267 compacted to: files[ 0 1 1 0 0 0 0 ]
+2015/04/21-17:03:57.918 31267 Delete type=2 #221
+2015/04/21-17:03:57.918 31267 Delete type=2 #210
+2015/04/21-17:03:57.918 31267 Delete type=2 #212
+2015/04/21-17:03:57.918 31267 Delete type=2 #215
+2015/04/21-17:03:57.918 31267 Delete type=2 #218

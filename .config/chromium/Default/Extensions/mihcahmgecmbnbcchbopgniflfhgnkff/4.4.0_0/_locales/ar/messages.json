@@ -1,0 +1,19 @@
+{
+   "gmailcheck_description": {
+      "message": "لعرض عدد الرسائل غير المقروءة في البريد الوارد في Google Mail. كما يمكنك النقر على الزر لفتح بريدك الوارد."
+   },
+   "gmailcheck_exception": {
+      "message": "استثناء: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "gmailcheck_name": {
+      "message": "Google Mail Checker"
+   },
+   "gmailcheck_node_error": {
+      "message": "خطأ: تم استرداد الخلاصة، ولكن لم يتم العثور على &lt;fullcount&gt; من العُقد"
+   }
+}

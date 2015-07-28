@@ -1,0 +1,19 @@
+{
+   "gmailcheck_description": {
+      "message": "Google Mail gelen kutunuzdaki okunmamış iletilerin sayısını görüntüler. Ayrıca, düğmeyi tıklayarak gelen kutunuzu da açabilirsiniz."
+   },
+   "gmailcheck_exception": {
+      "message": "özel durum: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "gmailcheck_name": {
+      "message": "Google Mail Checker"
+   },
+   "gmailcheck_node_error": {
+      "message": "Hata: yayın alındı, ancak &lt;fullcount&gt; düğümü bulunamadı"
+   }
+}

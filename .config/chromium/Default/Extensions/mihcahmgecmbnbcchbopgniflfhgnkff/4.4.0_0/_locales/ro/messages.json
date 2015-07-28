@@ -1,0 +1,19 @@
+{
+   "gmailcheck_description": {
+      "message": "Afişează numărul mesajelor necitite din folderul Mesaje primite al contului Google Mail. De asemenea, puteţi să faceţi clic pe buton pentru a deschide folderul Mesaje primite."
+   },
+   "gmailcheck_exception": {
+      "message": "excepţie: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "gmailcheck_name": {
+      "message": "Google Verificator de e-mail"
+   },
+   "gmailcheck_node_error": {
+      "message": "Eroare: s-a preluat feedul, dar nu s-a găsit niciun nod &lt;fullcount&gt;"
+   }
+}

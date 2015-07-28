@@ -1,0 +1,8 @@
+*.hi
+*.errors
+*~
+*#
+TAGS
+dist/
+*.o
+*.swp

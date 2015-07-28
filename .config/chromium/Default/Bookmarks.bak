@@ -1,0 +1,82 @@
+{
+   "checksum": "dbdef991cc1f5c7f9189f13817558c60",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13057953824651762",
+            "id": "19",
+            "meta_info": {
+               "stars.id": "ssc_794574268aa5b0a1",
+               "stars.isSynced": "true"
+            },
+            "name": "https://blackboard.stonybrook.edu/bbcswebdav/pid-3177676-dt-content-rid-19121178_1/courses/1148-CSE-373-SEC01-89329/midterm-sample-2.pdf",
+            "sync_transaction_version": "4",
+            "type": "url",
+            "url": "https://blackboard.stonybrook.edu/bbcswebdav/pid-3177676-dt-content-rid-19121178_1/courses/1148-CSE-373-SEC01-89329/midterm-sample-2.pdf"
+         } ],
+         "date_added": "13050957487815242",
+         "date_modified": "13057953824651762",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [ {
+            "date_added": "12989642413924892",
+            "id": "16",
+            "meta_info": {
+               "stars.flags": "6",
+               "stars.id": "ssc_1040aab198a6397d",
+               "stars.imageData": "ElgKUGh0dHA6Ly9zdGF0aWMxY2RuLmVjaGFsay5uZXQvd3d3L2RydmNueV9zdGpvaG50aGViYXB0aXN0ZGhzL2ltYWdlcy9wZXBfcmFsbHkuanBnELAJGKsD",
+               "stars.isSynced": "true",
+               "stars.pageData": "Ig5SUEhBcEVZUHdha0Q4TQ=="
+            },
+            "name": "St. John the Baptist Diocesan High School - Homepage",
+            "sync_transaction_version": "4",
+            "type": "url",
+            "url": "http://www.stjohnthebaptistdhs.net/home"
+         }, {
+            "date_added": "12989642413924892",
+            "id": "17",
+            "meta_info": {
+               "stars.id": "ssc_0842831ca89a9daa",
+               "stars.isSynced": "true",
+               "stars.pageData": "Ig5ZUW1yTldjbmVQWFY3TQ=="
+            },
+            "name": "Web Slice Gallery",
+            "sync_transaction_version": "4",
+            "type": "url",
+            "url": "http://go.microsoft.com/fwlink/?LinkId=121315"
+         }, {
+            "date_added": "13064442989983271",
+            "id": "20",
+            "meta_info": {
+               "stars.id": "ssc_f1d6ce8c9380c43c",
+               "stars.imageData": "Cg50NDAzaXlvNV84dFY5TRJPCkdodHRwczovL3d3dy5nbWFpbC5jb20vaW50bC9lbi9tYWlsL2hlbHAvaW1hZ2VzL2NpcmNsZS1oYW5nb3V0LXZpZGVvLnBuZxCTARiTARpjCltodHRwOi8vdDMuZ3N0YXRpYy5jb20vaW1hZ2VzP3E9dGJuOkFOZDlHY1NnVll6czJmNnhGREpuSzZLMDBOLTNaVW1OYUdDU2FXX2tXODE0WjJ2eE0yYURWYnI2EJMBGJMBIhAIARCTARiTAUIGEgSJJgD/KP6+0NOSs8YC",
+               "stars.isSynced": "true",
+               "stars.pageData": "Ig5mUUwtRmZKOGVfRUttTQ==",
+               "stars.type": "2"
+            },
+            "name": "Gmail",
+            "sync_transaction_version": "5",
+            "type": "url",
+            "url": "https://accounts.google.com/ServiceLogin?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&hl=en&emr=1&elo=1"
+         } ],
+         "date_added": "13050957487815255",
+         "date_modified": "13067994599770088",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "sync_transaction_version": "5",
+      "synced": {
+         "children": [  ],
+         "date_added": "13050957487815256",
+         "date_modified": "0",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

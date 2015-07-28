@@ -1,0 +1,19 @@
+{
+   "gmailcheck_description": {
+      "message": "Prikaže število neprebranih sporočil v nabiralniku storitve Google Mail. Nabiralnik lahko odprete tudi s klikom gumba."
+   },
+   "gmailcheck_exception": {
+      "message": "izjema: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "gmailcheck_name": {
+      "message": "Preverjevalnik za Google Mail"
+   },
+   "gmailcheck_node_error": {
+      "message": "Napaka: vir prejet, vendar ni bilo najdeno nobeno vozlišče &lt;fullcount&gt;"
+   }
+}

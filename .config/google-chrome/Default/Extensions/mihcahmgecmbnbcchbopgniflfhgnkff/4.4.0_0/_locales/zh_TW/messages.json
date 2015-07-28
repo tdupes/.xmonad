@@ -1,0 +1,19 @@
+{
+   "gmailcheck_description": {
+      "message": "在 Google Mail 收件匣中顯示未讀郵件的數目。按一下按鈕也可以開啟收件匣。"
+   },
+   "gmailcheck_exception": {
+      "message": "例外狀況：$1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "gmailcheck_name": {
+      "message": "Google Mail Checker"
+   },
+   "gmailcheck_node_error": {
+      "message": "錯誤：擷取到資訊提供，但找不到 &lt;fullcount&gt; 節點"
+   }
+}

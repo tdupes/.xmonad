@@ -1,0 +1,14 @@
+{
+   "appDesc": {
+      "description": "The description of the application, displayed in the web store.",
+      "message": "Оперативно получайте определения, автоматически загружайте следующие страницы, ускорьте поиск и не только."
+   },
+   "appName": {
+      "description": "The title of the application, displayed in the web store.",
+      "message": "FastestFox - Ускоренный обозреватель"
+   },
+   "page_n": {
+      "description": "Nth page, e.g.: Page 3",
+      "message": "Cтраница {0}"
+   }
+}

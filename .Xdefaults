@@ -1,0 +1,170 @@
+!-------------------------------------------------------------------------------
+! Xft settings
+!-------------------------------------------------------------------------------
+ 
+Xft.dpi:                    96
+Xft.antialias:              false
+Xft.rgba:                   rgb
+Xft.hinting:                true
+Xft.hintstyle:              hintslight
+ 
+!-------------------------------------------------------------------------------
+! URxvt settings
+! Colours lifted from Solarized (http://ethanschoonover.com/solarized)
+! More info at:
+! http://pod.tst.eu/http://cvs.schmorp.de/rxvt-unicode/doc/rxvt.1.pod
+!-------------------------------------------------------------------------------
+ 
+URxvt.depth:                32
+URxvt.geometry:             90x30
+URxvt.transparent:          false
+URxvt.fading:               0
+! URxvt.urgentOnBell:         true
+! URxvt.visualBell:           true
+URxvt.loginShell:           true
+URxvt.saveLines:            50
+URxvt.internalBorder:       3
+URxvt.lineSpace:            0
+ 
+! Fonts
+URxvt.allow_bold:           false
+/* URxvt.font:                 -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso8859-1 */
+URxvt*font: xft:Monospace:pixelsize=10
+URxvt*boldFont: xft:Monospace:pixelsize=10
+ 
+! Fix font space
+URxvt*letterSpace: -1
+ 
+! Scrollbar
+URxvt.scrollStyle:          rxvt
+URxvt.scrollBar:            false
+ 
+! Perl extensions
+URxvt.perl-ext-common:      default,matcher
+URxvt.matcher.button:       1
+URxvt.urlLauncher:          firefox
+ 
+! Cursor
+URxvt.cursorBlink:          true
+URxvt.cursorColor:          #657b83
+URxvt.cursorUnderline:      false
+ 
+! Pointer
+URxvt.pointerBlank:         true
+ 
+ ! Zenburn color-scheme
+urxvt*background:  #3f3f3f
+urxvt*foreground:  #dcdccc
+! black + red
+!urxvt*color0:     #3f3f3f
+urxvt*color0:      #1E2320
+urxvt*color1:      #705050
+! green + yellow
+urxvt*color2:      #60b48a
+urxvt*color3:      #dfaf8f
+! blue + purple
+urxvt*color4:      #506070
+urxvt*color5:      #dc8cc3
+! cyan + white
+urxvt*color6:      #8cd0d3
+urxvt*color7:      #dcdccc
+! bright-black + bright-red
+urxvt*color8:      #709080
+urxvt*color9:      #dca3a3
+! bright-green + bright-yellow
+urxvt*color10:     #c3bf9f
+urxvt*color11:     #f0dfaf
+! bright-blue + bright-purple
+urxvt*color12:     #94bff3
+urxvt*color13:     #ec93d3
+! bright-cyan + bright-white
+urxvt*color14:     #93e0e3
+urxvt*color15:     #ffffff
+!}}}
+
+!! old - SOLARIZED DARK
+! *background: #002b36
+! *foreground: #657b83
+! !!*fading: 40
+! *fadeColor: #002b36
+! *cursorColor: #93a1a1
+! *pointerColorBackground: #586e75
+! *pointerColorForeground: #93a1a1
+ 
+! !! black dark/light
+! *color0: #073642
+! *color8: #002b36
+ 
+! !! red dark/light
+! *color1: #dc322f
+! *color9: #cb4b16
+ 
+! !! green dark/light
+! *color2: #859900
+! *color10: #586e75
+ 
+! !! yellow dark/light
+! *color3: #b58900
+! *color11: #657b83
+ 
+! !! blue dark/light
+! *color4: #268bd2
+! *color12: #839496
+ 
+! !! magenta dark/light
+! *color5: #d33682
+! *color13: #6c71c4
+ 
+! !! cyan dark/light
+! *color6: #2aa198
+! *color14: #93a1a1
+ 
+! !! white dark/light
+! *color7: #eee8d5
+! *color15: #fdf6e3
+
+
+
+
+
+
+! black
+! URxvt.color0  : #2B2B2B
+! URxvt.color8  : #DEDEDE
+! red
+! URxvt.color1  : #CCCC00000000
+! URxvt.color9  : #EFEF29292929
+! green
+! URxvt.color2  : #4E4E9A9A0606
+! URxvt.color10 : #8A8AE2E23434
+! yellow
+! URxvt.color3  : #C4C4A0A00000
+! URxvt.color11 : #FCFCE9E94F4F
+! blue
+! URxvt.color4  : #34346565A4A4
+! URxvt.color12 : #72729F9FCFCF
+! magenta
+! URxvt.color5  : #757550507B7B
+! URxvt.color13 : #ADAD7F7FA8A8
+! cyan
+! URxvt.color6  : #060698209A9A
+! URxvt.color14 : #3434E2E2E2E2
+! white
+! URxvt.color7  : #D3D3D7D7CFCF
+! URxvt.color15 : #EEEEEEEEECEC
+
+! URxvt*foreground:White
+! URxvt*background: #141414
+
+! fonts
+! run "fc-list" for a list of available fonts
+! URxvt*font: xft:Monospace:pixelsize=12
+
+! URxvt*scrollBar: False
+! URxvt*scrollTtyOutput: False
+! URxvt*scrollTtyKeypress: True
+! URxvt*secondaryScroll: True
+! URxvt*saveLines: 8000
+
+! URxvt*transparent: False 
+! URxvt*shading:10

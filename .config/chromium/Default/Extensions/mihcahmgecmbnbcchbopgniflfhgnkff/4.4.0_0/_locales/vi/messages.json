@@ -1,0 +1,19 @@
+{
+   "gmailcheck_description": {
+      "message": "Hiển thị số thư chưa đọc trong hộp thư đến Gmail của bạn. Bạn cũng có thể nhấp vào nút để mở hộp thư đến của mình."
+   },
+   "gmailcheck_exception": {
+      "message": "ngoại lệ: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "gmailcheck_name": {
+      "message": "Trình Kiểm tra Thư của Google"
+   },
+   "gmailcheck_node_error": {
+      "message": "Lỗi: nguồn cấp dữ liệu đã được truy xuất nhưng không tìm thấy nút &lt;fullcount&gt; nào"
+   }
+}

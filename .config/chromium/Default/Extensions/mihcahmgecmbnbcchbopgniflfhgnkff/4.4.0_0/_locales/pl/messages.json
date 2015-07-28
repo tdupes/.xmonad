@@ -1,0 +1,19 @@
+{
+   "gmailcheck_description": {
+      "message": "Wyświetla liczbę nieprzeczytanych wiadomości w Twojej skrzynce odbiorczej Google Mail. Możesz też kliknąć przycisk, aby otworzyć swoją skrzynkę odbiorczą."
+   },
+   "gmailcheck_exception": {
+      "message": "wyjątek: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "gmailcheck_name": {
+      "message": "Sprawdzanie poczty Google"
+   },
+   "gmailcheck_node_error": {
+      "message": "Błąd: pobrano kanał, ale nie odnaleziono węzła &lt;fullcount&gt;"
+   }
+}

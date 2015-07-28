@@ -1,0 +1,19 @@
+{
+   "gmailcheck_description": {
+      "message": "Visar hur många olästa meddelanden du har i inkorgen i Google Mail. Du kan också klicka på knappen om du vill öppna inkorgen."
+   },
+   "gmailcheck_exception": {
+      "message": "undantag: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "gmailcheck_name": {
+      "message": "Google Mail Checker"
+   },
+   "gmailcheck_node_error": {
+      "message": "Fel: feeden hämtades, men ingen &lt;fullcount&gt;-nod hittades"
+   }
+}

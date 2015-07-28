@@ -1,0 +1,19 @@
+{
+   "gmailcheck_description": {
+      "message": "Gmaill 받은편지함에서 읽지 않은 메일의 수를 나타냅니다. 또한 버튼을 클릭하여 받은편지함을 열 수도 있습니다."
+   },
+   "gmailcheck_exception": {
+      "message": "예외: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "gmailcheck_name": {
+      "message": "Google Mail Checker"
+   },
+   "gmailcheck_node_error": {
+      "message": "오류: 피드를 검색했으나 총 &lt;fullcount&gt;개의 노드를 찾지 못했습니다."
+   }
+}

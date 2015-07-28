@@ -1,0 +1,19 @@
+{
+   "gmailcheck_description": {
+      "message": "Viser antallet uleste meldinger i innboksen for Google Mail. Du kan også klikke på knappen for å åpne innboksen."
+   },
+   "gmailcheck_exception": {
+      "message": "unntak: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "gmailcheck_name": {
+      "message": "Google e-post-sjekker"
+   },
+   "gmailcheck_node_error": {
+      "message": "Feil: innmating hentet, men finner ingen &lt;fullcount&gt;-node"
+   }
+}

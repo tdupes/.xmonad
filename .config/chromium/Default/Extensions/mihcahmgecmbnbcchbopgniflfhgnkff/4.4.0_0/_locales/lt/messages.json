@@ -1,0 +1,19 @@
+{
+   "gmailcheck_description": {
+      "message": "Pateikiamas „Google“ pašto gautų laiškų aplanke esančių neperskaitytų pranešimų skaičius. Be to, jei norite atidaryti gautų laiškų aplanką, galite spustelėti mygtuką."
+   },
+   "gmailcheck_exception": {
+      "message": "išimtis: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "gmailcheck_name": {
+      "message": "„Google“ pašto tikrintuvas"
+   },
+   "gmailcheck_node_error": {
+      "message": "Klaida: sklaidos kanalas nuskaitytas, tačiau nerastas joks &lt;fullcount&gt; mazgas"
+   }
+}

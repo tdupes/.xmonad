@@ -1,0 +1,4 @@
+
+feh --bg-scale /home/thomasduplessis/Pictures/solarized.jpg &
+
+exec xmonad 

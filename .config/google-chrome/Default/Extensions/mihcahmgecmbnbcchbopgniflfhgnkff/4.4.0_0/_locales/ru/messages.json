@@ -1,0 +1,19 @@
+{
+   "gmailcheck_description": {
+      "message": "Отображение количества непрочитанных сообщений в почтовом ящике Google Mail. Можно также нажать кнопку, чтобы открыть папку \"Входящие\"."
+   },
+   "gmailcheck_exception": {
+      "message": "исключение: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "gmailcheck_name": {
+      "message": "Google Mail Checker"
+   },
+   "gmailcheck_node_error": {
+      "message": "Ошибка: фид был получен, но не удалось найти узел &lt;fullcount&gt;"
+   }
+}

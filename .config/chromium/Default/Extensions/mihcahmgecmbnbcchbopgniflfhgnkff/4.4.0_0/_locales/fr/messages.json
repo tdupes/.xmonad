@@ -1,0 +1,19 @@
+{
+   "gmailcheck_description": {
+      "message": "Affiche le nombre de messages non lus dans votre boîte de réception Google Mail. Vous avez également la possibilité de cliquer sur ce bouton pour ouvrir cette dernière."
+   },
+   "gmailcheck_exception": {
+      "message": "exception : $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "gmailcheck_name": {
+      "message": "Vérificateur de messages Google"
+   },
+   "gmailcheck_node_error": {
+      "message": "Erreur : flux récupéré, mais aucun nœud &lt;fullcount&gt; trouvé"
+   }
+}

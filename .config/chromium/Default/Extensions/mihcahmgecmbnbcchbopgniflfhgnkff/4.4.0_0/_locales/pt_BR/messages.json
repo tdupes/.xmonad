@@ -1,0 +1,19 @@
+{
+   "gmailcheck_description": {
+      "message": "Exibe o número de mensagens não lidas na sua Caixa de entrada do Gmail. Você também pode clicar no botão para abrir a sua caixa de entrada."
+   },
+   "gmailcheck_exception": {
+      "message": "exceção: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "gmailcheck_name": {
+      "message": "Verificador de mensagens do Google"
+   },
+   "gmailcheck_node_error": {
+      "message": "Erro: feed recuperado, mas nenhum nó &lt;fullcount&gt; encontrado"
+   }
+}

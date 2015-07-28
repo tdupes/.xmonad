@@ -1,0 +1,19 @@
+{
+   "gmailcheck_description": {
+      "message": "Zobrazí počet nepřečtených zpráv ve složce Doručená pošta služby Google Mail. Kliknutím na tlačítko tuto složku otevřete."
+   },
+   "gmailcheck_exception": {
+      "message": "výjimka: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "gmailcheck_name": {
+      "message": "Kontrola e-mailu Google"
+   },
+   "gmailcheck_node_error": {
+      "message": "Chyba: Zdroj byl načten, nebyl však nalezen žádný uzel &lt;fullcount&gt;."
+   }
+}

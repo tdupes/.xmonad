@@ -1,0 +1,19 @@
+{
+   "gmailcheck_description": {
+      "message": "Megjeleníti az olvasatlan üzeneteket a Google Mail beérkező levelei között. A gombra kattintva is megnyithatja a beérkező leveleit."
+   },
+   "gmailcheck_exception": {
+      "message": "kivétel: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "gmailcheck_name": {
+      "message": "Google Levélfigyelő"
+   },
+   "gmailcheck_node_error": {
+      "message": "Hiba: hírcsatorna lehívva, de a csomópont (&lt;fullcount&gt;) hiányzik"
+   }
+}

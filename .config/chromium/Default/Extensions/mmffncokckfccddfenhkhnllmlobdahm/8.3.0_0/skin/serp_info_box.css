@@ -1,0 +1,137 @@
+.smarterwiki-serp-info-box .ddg_head 
+{
+    text-shadow: #444444 0px -1px 0px !important;
+}
+.smarterwiki-serp-info-box #ddg_zeroclick
+{
+    border-radius: 4px !important;
+    -moz-border-radius: 4px 4px 4px 4px !important;
+}
+
+.smarterwiki-serp-info-box #ddg_zeroclick_header
+{
+    background: -webkit-linear-gradient(top, #7f7f7f 0%, #636363 100%) !important;
+    background: -moz-linear-gradient(top, #7f7f7f 0%, #636363 100%) !important;
+    background: linear-gradient(to bottom, #7f7f7f 0%, #636363 100%) !important;
+    border: 1px solid #666 !important;
+    border-radius: 4px 4px 0 0 !important;
+    -moz-border-radius: 4px 4px 0 0 !important;
+}
+
+.smarterwiki-serp-info-box #ddg_zeroclick_header img
+{
+    margin: 0 0 0 8px !important;
+}
+
+.smarterwiki-serp-info-box #ddg_zeroclick_abstract
+{
+    text-shadow: white 0.8px 0.8px 0px !important;
+}
+
+.smarterwiki-close-button
+{
+    width: 15px;
+    height: 15px;
+    display: block;
+}
+.smarterwiki-close-button-inner
+{
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    height: 0;
+    width: 15px;
+    padding: 15px 0 0 0;
+    border-radius: 15px;
+    -moz-border-radius: 15px 15px 15px 15px;
+    background: #fafafa none;
+    color: #717171;
+    cursor: pointer;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.smarterwiki-close-button-inner:hover
+{
+    background: #ddd none;    
+}
+.smarterwiki-close-button-inner:before
+{
+    content: "\D7";
+    display: block;
+    text-align: center;
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 15px;
+    font-size: 15px;
+    line-height: 15px;
+    font-family: "Helvetica Neue", Consolas, Verdana, Tahoma, Calibri, Helvetica, Menlo, "Droid Sans", sans-serif;
+}
+.smarterwiki-serp-info-box .smarterwiki-close-button
+{
+    float: right;
+    margin-top: 3.5px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+/* patches + bugfixes*/
+.smarterwiki-serp-info-box .ddg_more
+{
+    display: none;
+}
+.smarterwiki-serp-info-box.bing #ddg_zeroclick_header
+{
+}
+
+
+
+
+.smarterwiki-serp-info-box.google
+{
+    width: 554px;    
+}
+.smarterwiki-serp-info-box #ddg_attribution
+{
+    display: none;
+}
+.smarterwiki-serp-info-box #smarterwiki-attr
+{
+    font-size: 10px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 7px;
+    margin-top: 5px;
+}
+.smarterwiki-serp-info-box #smarterwiki-attr img 
+{
+    width: 16px;
+    height: 16px;
+    vertical-align: text-bottom !important;
+}
+.smarterwiki-serp-info-box #smarterwiki-ext-attr
+{
+}
+.smarterwiki-serp-info-box #smarterwiki-ddg-attr
+{
+    float: right;
+}
+.smarterwiki-serp-info-box #smarterwiki-ddg-attr img 
+{
+    margin-left: 3px !important;
+    margin-right: 3px !important;
+}
+.smarterwiki-serp-info-box #smarterwiki-ext-attr img 
+{
+    margin-right: 4px !important;
+}
+#ddg_zeroclick_header img 
+{
+    display: none;
+}
+
+.smarterwiki-serp-info-box #ddg_zeroclick_header .ddg_head
+{
+    color: #fff !important
+}

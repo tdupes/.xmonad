@@ -1,0 +1,14 @@
+{
+   "appDesc": {
+      "description": "The description of the application, displayed in the web store.",
+      "message": "Ottieni le tue definizioni più rapidamente, carica automaticamente le pagine successive, ricerca velocemente, e molto di più."
+   },
+   "appName": {
+      "description": "The title of the application, displayed in the web store.",
+      "message": "FastestFox – Naviga più velocemente"
+   },
+   "page_n": {
+      "description": "Nth page, e.g.: Page 3",
+      "message": "Pagina {0}"
+   }
+}

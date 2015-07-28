@@ -1,0 +1,17 @@
+{
+   "app": {
+      "launch": {
+         "web_url": "http://chrome.plantsvszombies.com/"
+      },
+      "urls": [ "http://chrome.plantsvszombies.com/" ]
+   },
+   "description": "Think fast and plant faster to stem a zombie attack and save your home in this action-strategy PopCap game! - FREE TRIAL",
+   "icons": {
+      "128": "icon_128.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCuCKUZK/OvlXP1HM7Zt5HVczwtFJi3DmOz2PWvD9j0kgcC72ZPUvk464tdmk2UhA7WmAF7bNOcLaJbuHs7vtW2/Z1HF/ruLYwJ95GEnJpZaMAlKzzigvQOKRFVQbQLZxNJxhv5d2zA7qI810hIP4XmSvN63OFo47DFBHGC6EAKiwIDAQAB",
+   "name": "Plants vs Zombies",
+   "permissions": [ "unlimitedStorage" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.0.5"
+}

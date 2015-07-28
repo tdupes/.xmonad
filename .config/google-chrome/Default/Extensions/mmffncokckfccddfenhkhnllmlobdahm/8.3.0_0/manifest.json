@@ -1,0 +1,27 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "skin/endless_pages.css", "skin/infinite_scroll.css", "skin/popup_bubble.css", "skin/related_search_results.css", "skin/related_searches.css", "skin/fastest_common.css", "skin/ddg_zero_click_info.css", "skin/serp_info_box.css" ],
+      "js": [ "jquery.js", "scripts/env_setup.js", "scripts/endless_pages_heuristics.js", "scripts/endless_pages.js", "scripts/add_scrolling_rule.js", "scripts/linkify.js", "scripts/popup_bubble.js", "scripts/related_articles.js", "scripts/related_search_results.js", "scripts/related_searches.js", "scripts/ddg_common.js", "scripts/serp_info_box.js", "scripts/related_shopping_results.js", "scripts/search_refinements.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_end"
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_appDesc__",
+   "icons": {
+      "128": "skin/icons/fastestfox-logo-128x128.png",
+      "32": "skin/icons/fastestfox-logo-32x32.png",
+      "48": "skin/icons/fastestfox-logo-48x48.png",
+      "64": "skin/icons/fastestfox-logo-64x64.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC9sFvhtwrPqNIs7VciLfnlQEnUWaHd7OVG02LPW/s+LlhrCG+6nW44miJr0EW5OlxlDGD3jnJzy3Dl2GCZGNAPu++Dzwzsxivd/XLDTpitOyVCG7v67vhW7nXlxq/ZLm9lEwP0fr/KZ1QhdrQBr8V5eIwMLXCdDV4xKL8IxR7LbwIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_appName__",
+   "options_page": "options.html",
+   "permissions": [ "tabs", "cookies", "contextMenus", "notifications", "unlimitedStorage", "storage", "clipboardWrite", "idle", "http://*/*", "https://*/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "8.3.0"
+}

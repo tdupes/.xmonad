@@ -1,0 +1,19 @@
+{
+   "gmailcheck_description": {
+      "message": "Näyttää, kuinka monta lukematonta viestiä Google Mail -postilaatikossasi on. Voit myös avata postilaatikkosi napsauttamalla painiketta."
+   },
+   "gmailcheck_exception": {
+      "message": "poikkeus: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "gmailcheck_name": {
+      "message": "Google-sähköpostin tarkistus"
+   },
+   "gmailcheck_node_error": {
+      "message": "Virhe: syöte haettiin, mutta &lt;fullcount&gt;-solmua ei löytynyt"
+   }
+}

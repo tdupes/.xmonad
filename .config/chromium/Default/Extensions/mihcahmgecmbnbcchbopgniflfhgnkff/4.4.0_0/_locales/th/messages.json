@@ -1,0 +1,19 @@
+{
+   "gmailcheck_description": {
+      "message": "แสดงจำนวนของข้อความที่ยังไม่ได้อ่านในกล่องจดหมาย Google Mail ของคุณ และคุณสามารถคลิกปุ่มเพื่อเปิดกล่องจดหมายของคุณได้เช่นกัน"
+   },
+   "gmailcheck_exception": {
+      "message": "ข้อยกเว้น: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "gmailcheck_name": {
+      "message": "Google Mail Checker"
+   },
+   "gmailcheck_node_error": {
+      "message": "ข้อผิดพลาด: เรียกคืนฟีดแล้ว แต่ไม่พบโหนด &lt;fullcount&gt;"
+   }
+}

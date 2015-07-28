@@ -1,0 +1,19 @@
+{
+   "gmailcheck_description": {
+      "message": "Prikazuje broj nepročitanih poruka u ulaznom pretincu usluge Google Mail. Možete također kliknuti gumb za otvaranje ulazne pošte."
+   },
+   "gmailcheck_exception": {
+      "message": "izuzetak: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "gmailcheck_name": {
+      "message": "Google Provjera pošte"
+   },
+   "gmailcheck_node_error": {
+      "message": "Pogreška: Feed je dohvaćen, ali nije pronađeno čvorište &lt;fullcount&gt;"
+   }
+}

@@ -1,0 +1,19 @@
+{
+   "gmailcheck_description": {
+      "message": "מציג את מספר ההודעות שלא נקראו בתיבת הדואר הנכנס שלך ב-Google Mail. בנוסף, תוכל ללחוץ על הלחצן כדי לפתוח את תיבת הדואר הנכנס."
+   },
+   "gmailcheck_exception": {
+      "message": "חריג: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "gmailcheck_name": {
+      "message": "Google Mail Checker"
+   },
+   "gmailcheck_node_error": {
+      "message": "שגיאה: העדכון אוחזר, אך לא נמצאו צמתים של &lt;fullcount&gt;"
+   }
+}

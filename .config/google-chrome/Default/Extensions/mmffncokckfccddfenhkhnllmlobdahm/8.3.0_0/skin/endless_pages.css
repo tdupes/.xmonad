@@ -1,0 +1,189 @@
+/*Copyright: 2012 Yongqian Li*/
+
+#endless-pages-loading
+{
+    background-color: #F0F0F0 !important; /*#dfeaf8;*/
+    /*
+    border: 5px solid #b7c4df !important;
+    border-bottom-width: 0px;
+    */
+    border-style: solid !important;
+    border-color: #909090 !important; /*#b7c4df;*/
+    border-width: 3px 3px 3px 3px !important;
+    -moz-border-radius-topleft: 12px !important;
+    -moz-border-radius-topright: 12px !important; /* For FF 3.6 */
+    border-top-left-radius: 12px !important;
+    border-top-right-radius: 12px !important;
+    padding: 13px !important;
+    position: fixed !important;
+    right: 0px !important;
+    bottom: 0px !important;
+    z-index: 2147483647 !important;
+
+    color: #000000 !important;
+    font-family: Verdana !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    box-shadow: 0px 0px 10px #000 !important;
+    margin-right: 25px !important;
+    /*font-family: "Lucida Bright", "Times New Roman", Times, serif;*/
+}
+
+#endless-pages-loading-spinner
+{
+    vertical-align: middle !important;
+    margin-right: 5px !important;
+}
+#endless-pages-loading-spinner.fastestx-logo
+{
+    -webkit-animation-name: rotate-spinner !important;
+    -webkit-animation-duration: 2s !important;
+    -webkit-animation-iteration-count: infinite !important;
+    -webkit-animation-timing-function: linear !important;
+
+    -moz-animation-name: rotate-spinner !important;
+    -moz-animation-duration: 2s !important;
+    -moz-animation-iteration-count: infinite !important;
+    -moz-animation-timing-function: linear !important;
+
+    animation-name: rotate-spinner !important;
+    animation-duration: 2s !important;
+    animation-iteration-count: infinite !important;
+    animation-timing-function: linear !important;
+
+    margin-right: 2px !important;
+    margin-left: -5px !important; /* to compensate for extra space due to transforms */
+}
+@-webkit-keyframes rotate-spinner
+{
+    from { -webkit-transform:scale(0.5) rotate(0deg); }
+    to { -webkit-transform:scale(0.5) rotate(360deg); }
+} 
+@-moz-keyframes rotate-spinner
+{
+    from { -moz-transform:scale(0.5) rotate(0deg); }
+    to { -moz-transform:scale(0.5) rotate(360deg); }
+} 
+@keyframes rotate-spinner
+{
+    from { transform:scale(0.5) rotate(0deg); }
+    to { transform:scale(0.5) rotate(360deg); }
+} 
+
+#loaded-by-endless-pages
+{
+    clear: both !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    /*remeber that <body> can have margin + padding, etc*/
+}
+
+.endless-pages-page
+{
+    clear: both !important;
+}
+
+#loaded-by-endless-pages .endless-pages-page-break-full
+{
+    background-image: url("data:image/gif;base64,R0lGODlhBQAFAJEAABgYGC4uLigoKAAAACH5BAAAAAAALAAAAAAFAAUAAAIJhBIihsm4FAQFADs%3D") !important;
+    /*http://static.smarterfox.com/media/smarterwiki/endless_pages/dinpattern-stripe.gif*/
+    background-repeat: repeat !important;
+    left: 0 !important;
+    position: absolute !important;
+    width: 100% !important;
+    height: 34px !important; /*Needed for below*/
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    margin: 0 !important;
+    text-align: center;
+    clear: both !important;
+    font-weight: bold !important;
+}
+#loaded-by-endless-pages .endless-pages-page-break-auto
+{
+    background-image: url("data:image/gif;base64,R0lGODlhBQAFAJEAABgYGC4uLigoKAAAACH5BAAAAAAALAAAAAAFAAUAAAIJhBIihsm4FAQFADs%3D") !important;
+    /*http://static.smarterfox.com/media/smarterwiki/endless_pages/dinpattern-stripe.gif*/
+    background-repeat: repeat !important;
+    width: 100% !important;
+    height: 34px !important; /*Needed for below*/
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    margin: 0 !important;
+    text-align: center;
+    clear: both !important;
+    font-weight: bold !important;
+}
+
+#loaded-by-endless-pages .endless-pages-page-break .endless-pages-page-break-desc *
+{
+    background: none !important;
+    background-color: transparent !important;
+}
+
+#loaded-by-endless-pages .endless-pages-loaded-page-full
+{
+    padding-top: 54px; /* will be overridden by js*/
+}
+
+#loaded-by-endless-pages .endless-pages-loaded-page-auto
+{
+    padding-top: 24px !important;
+}
+
+.smarterwiki-clearfix:after
+{
+    clear: both !important;
+    content: "." !important;
+    display: block !important;
+    width: 0 !important;
+    height: 0 !important;
+    visibility: hidden !important;
+}
+
+.smarterfox-icon
+{
+    vertical-align: middle !important;
+    height: 24px !important; 
+    width: 21px !important;
+    margin-right: 3px !important;
+    display: inline-block !important;
+}
+
+#loaded-by-endless-pages .endless-pages-page-break * 
+{
+    text-align: center !important;
+}
+
+#loaded-by-endless-pages .endless-pages-page-break
+{   
+    text-align: center !important;
+}
+
+
+#loaded-by-endless-pages .endless-pages-page-break-desc
+{
+    vertical-align: middle !important;
+    width: auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    background-color: #FFFFFF !important;
+    text-align: center !important;
+    padding: 5px !important;
+    display: inline-block !important;
+    -moz-border-radius: 8px !important;
+    border-radius: 8px !important;
+    height: 24px !important;
+
+    font-family: Verdana !important;
+    font-size: 10pt !important;
+}
+
+#loaded-by-endless-pages a.endless-pages-page-break-link,
+#loaded-by-endless-pages a:visited.endless-pages-page-break-link,
+#loaded-by-endless-pages a:hover.endless-pages-page-break-link
+{
+    color: #000000 !important;
+    text-decoration: underline !important;
+}
+

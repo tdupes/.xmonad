@@ -1,0 +1,19 @@
+{
+   "gmailcheck_description": {
+      "message": "Εμφανίζει τον αριθμό των μη αναγνωσμένων μηνυμάτων στα εισερχόμενα του Google Mail σας. Μπορείτε επίσης να κάνετε κλικ στο κουμπί για να ανοίξετε τα εισερχόμενά σας."
+   },
+   "gmailcheck_exception": {
+      "message": "εξαίρεση: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "gmailcheck_name": {
+      "message": "Έλεγχος του Google Mail"
+   },
+   "gmailcheck_node_error": {
+      "message": "Σφάλμα: έγινε ανάκτηση ροής, αλλά δεν βρέθηκε κόμβος &lt;fullcount&gt;"
+   }
+}

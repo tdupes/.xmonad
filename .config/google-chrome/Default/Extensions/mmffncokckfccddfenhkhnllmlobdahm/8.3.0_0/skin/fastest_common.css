@@ -1,0 +1,12 @@
+#footer a.dp-button[href="http://smarterfox.com"][target="_blank"]
+{
+    display: inline !important;
+    margin-top: -29px;
+}
+
+.dealply_container .powered_by 
+{
+    bottom: 15px !important;
+    right: 30px !important;
+    z-index: 9999999 !important;
+}

@@ -1,0 +1,19 @@
+{
+   "gmailcheck_description": {
+      "message": "Показва броя непрочетени съобщения във входящата ви поща в Google Mail. Можете също да кликнете върху бутона, за да я отворите."
+   },
+   "gmailcheck_exception": {
+      "message": "изключение: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "gmailcheck_name": {
+      "message": "Google Проверка на пощата"
+   },
+   "gmailcheck_node_error": {
+      "message": "Грешка: Емисията бе извлечена, но няма намерен възел &lt;fullcount&gt;"
+   }
+}

@@ -1,0 +1,19 @@
+{
+   "gmailcheck_description": {
+      "message": "Google Mail の受信トレイにある未読のメール数を表示します。このボタンをクリックして受信トレイを開くこともできます。"
+   },
+   "gmailcheck_exception": {
+      "message": "例外: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "gmailcheck_name": {
+      "message": "Google Mail Checker"
+   },
+   "gmailcheck_node_error": {
+      "message": "エラー: 取得したフィードに &lt;fullcount&gt; ノードがありません"
+   }
+}

@@ -1,0 +1,19 @@
+{
+   "gmailcheck_description": {
+      "message": "Приказује број непрочитаних примљених порука Google Mail-а. Можете и да кликнете на дугме и отворите примљене поруке."
+   },
+   "gmailcheck_exception": {
+      "message": "изузетак: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "gmailcheck_name": {
+      "message": "Google провера поште"
+   },
+   "gmailcheck_node_error": {
+      "message": "Грешка: Фид је преузет, али чвор &lt;fullcount&gt; није пронађен"
+   }
+}

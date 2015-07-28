@@ -1,0 +1,71 @@
+/*Copyright: 2012 Yongqian Li*/
+
+.fastestfox-elem-hovered
+{
+    background-color:#9fc4e7 !important;
+}
+
+#infinite-scroll-rule-creator-ui *
+{
+    height: auto !important;
+    font-family: Arial,Helvetica,Sans-Serif !important;
+    font-size: 13px !important;
+    color: black !important;
+}
+#infinite-scroll-rule-creator-ui
+{
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    
+    -moz-border-radius: 8px !important;
+    border-radius: 8px !important;
+    background-color: #EEEEEE !important;
+    border: 3px solid #CCCCCC !important;
+    padding: 20px 20px 20px 20px !important;
+    display: block !important;
+}
+
+#infinite-scroll-rule-creator-ui input
+{
+    border: 4px solid #C0C0C0;
+    font-size: 1.0em;
+    font-family: "Lucida Grande",verdana,arial,helvetica,sans-serif;
+    /*width: 25%;*/
+    width: 300px;
+}
+
+#infinite-scroll-rule-creator-ui .title
+{
+    font-size: 14px !important;
+    font-weight: bold !important;
+}
+
+#infinite-scroll-rule-creator-ui #close-rule-creator-ui
+{
+    background-color: transparent !important;
+    background-image: url("http://static.smarterfox.com/media/close-icon-gray.png") !important;
+    background-position: 0 0 !important;
+    background-repeat: no-repeat !important;
+    border: medium none !important;
+    display: inline-block !important;
+    height: 13px !important;
+    vertical-align: middle !important;
+    width: 13px !important;
+    float: right !important;     
+}
+
+#infinite-scroll-rule-creator-ui .error-label 
+{
+    color: red !important;
+}
+
+.fastestfox-selected-main-content
+{
+    background-color:yellow !important;
+}
+
+.fastestfox-selected-next-link
+{
+    background-color:green !important;
+}

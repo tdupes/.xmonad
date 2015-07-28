@@ -1,0 +1,19 @@
+{
+   "gmailcheck_description": {
+      "message": "Tiek rādīts nelasīto ziņojumu skaits Google Mail iesūtnē. Varat arī noklikšķināt uz pogas, lai atvērtu iesūtni."
+   },
+   "gmailcheck_exception": {
+      "message": "izņēmums: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "gmailcheck_name": {
+      "message": "Google Mail Checker"
+   },
+   "gmailcheck_node_error": {
+      "message": "Kļūda: plūsma ir izgūta, taču netika atrasts neviens &lt;fullcount&gt; mezgls"
+   }
+}
