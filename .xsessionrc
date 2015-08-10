@@ -1,4 +1,0 @@
-
-feh --bg-scale /home/tom/Pictures/Lake-Mountain.jpg &
-
-exec xmonad 

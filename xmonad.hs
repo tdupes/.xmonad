@@ -12,33 +12,23 @@ import XMonad.Hooks.ManageHelpers (doCenterFloat, (/=?), isInProperty, isFullscr
 import XMonad.Layout.NoBorders
 import XMonad.Hooks.SetWMName
 import XMonad.Actions.WindowGo
+import XMonad.Hooks.EwmhDesktops hiding (fullscreenEventHook)
 import qualified XMonad.StackSet as W
 import qualified Data.Map as M
+import XMonad.Hooks.FadeInactive
 
 
 
 myWorkspaces :: [String]
-myWorkspaces = ["one", "two", "three", "four", "five"] ++ map show [6..9]
-
-------------------------------------------------------------------------
--- Layouts
--- You can specify and transform your layouts by modifying these values.
--- If you change layout bindings be sure to use 'mod-shift-space' after
--- restarting (with 'mod-q') to reset your layout state to the new
--- defaults, as xmonad preserves your old layout settings by default.
---
--- The available layouts. Note that each layout is separated by |||,
--- which denotes layout choice.
---
--- defaultLayouts = avoidStruts (
---     Tall 1 (3/100) (1/2) |||
---     Mirror (Tall 1 (3/100) (1/2)) |||
---     tabbed shrinkText tabConfig |||
---     Full |||
---     spiral (6/7)) |||
---     noBorders (fullscreenFull Full)
-    
-
+myWorkspaces = clickable $ ["i"
+		,"ii"	
+		,"iii"	
+		,"iv"	
+		,"v"
+		,"vi"]	
+	where clickable l = [ "^ca(1,xdotool key alt+" ++ show (n) ++ ")" ++ ws ++ "^ca()" |
+				(i,ws) <- zip [1..] l,
+				let n = i ]
 --------------------------------------------------------------------------
 -- Colors and borders
 --
@@ -47,18 +37,6 @@ myFocusedBorderColor = "#657b83"
 
 --------------------------------------------------------------------------
 
-
--- Colors for text and backgrounds of each tab when in "Tabbed" layout.
--- tabConfig = defaultTheme {
---     activeBorderColor = "#7C7C7C",
---     activeTextColor = "#CEFFAC",
---     activeColor = "#000000",
---     inactiveBorderColor = "#7C7C7C",
---     inactiveTextColor = "#EEEEEE",
---     inactiveColor = "#000000"
--- }
-
-----------------------------------------------------------------------------
 -- Color of current window title in xmobar.
 xmobarTitleColor = "green"
 
@@ -78,9 +56,9 @@ myDisplayBrightnessUp    = "xbacklight -inc 5" -- && backlight_popup.sh"
 myDisplayBrightnessDown  = "xbacklight -dec 5" -- && backlight_popup.sh"
 myKeyboardBrightnessUp   = "kbdlight up"
 myKeyboardBrightnessDown = "kbdlight down"
-myTerminal = "/usr/bin/urxvt -e zsh"
-myFocusFollowsMouse = False
-myKeys =  keys defaultConfig
+myTerminal               = "/usr/bin/urxvt -e zsh"
+myFocusFollowsMouse      = False
+myKeys                   = keys defaultConfig
 ------------------------------------------------------------------------------
 
 myLayout = avoidStruts  ( {-tiled ||| -} smallspacing |||  nospace ||| Mirror nospace ||| Full) |||
@@ -99,10 +77,8 @@ myLayout = avoidStruts  ( {-tiled ||| -} smallspacing |||  nospace ||| Mirror no
        
 
 myManageHook = composeAll
-               [
-                className =? "Gimp" --> doFloat
+               [  className =? "Gimp" --> doFloat
                 , className =? "lighthouse" --> doFloat
-                , className =? "nemo" --> doFloat
                 , className =? "nautilus" --> doFloat
                 , className =? "Nautilus" --> doFloat
                 , className =? "nm-applet" --> doFloat
@@ -110,26 +86,21 @@ myManageHook = composeAll
                <+>
                composeOne [ isFullscreen -?> doFullFloat ]
 
+myXmonadBar = "dzen2 -x '0' -y '0' -w '1600' -ta 'l' -fg '"++foreground++"' -bg '"++background++"' -fn "++myFont
+myStatusBar = "/home/tom/.xmonad/status_bar '" ++ foreground ++ "' '" ++ background ++ "' " ++ myFont
                 
 main :: IO ()
 main = do
-    xmproc <- spawnPipe "/usr/bin/xmobar /home/thomasduplessis/.xmobarrc"
-    spawn "feh --bg-scale /home/thomasduplessis/Pictures/solarized.jpg &"
-    xmonad $ defaults
-        {
-          manageHook =  myManageHook <+> manageDocks,
-          layoutHook = myLayout,
-          logHook = dynamicLogWithPP xmobarPP {
-                      ppOutput = hPutStrLn xmproc,
-                      ppTitle = xmobarColor "#657b83" "" . shorten 100,
-                      ppCurrent = xmobarColor "#c0c0c0" "" . wrap "" "",
-                      ppSep     = xmobarColor "#c0c0c0" "" " | ",
-                      ppUrgent  = xmobarColor "#ff69b4" "",
-                      ppLayout = const "" --to disavle the layout info on xmobar
-                    } ,
-
---          keys =    keys defaultConfig,
-          startupHook = setWMName "LG3D"
+    dzenLeftBar <- spawnPipe myXmonadBar
+    dzenRightBAr <- spawnPipe myStatusBar    
+    spawn "feh --bg-scale /home/tom/Pictures/Lake-Mountain.jpg &"
+    spawn "systemctl start wicd"
+    spawn "systemctl enable wicd"
+    xmonad $ ewmh defaults {
+          manageHook =  myManageHook <+> manageDocks
+          , layoutHook = myLayout
+          , logHook = myLogHook dzenLeftBar -- >> fadeInactiveLogHook 0xdddddddd
+          , startupHook = setWMName "LG3D"
         } `additionalKeys` morekeys
 
 
@@ -139,16 +110,29 @@ defaults = defaultConfig {
   borderWidth        = myBorderWidth,
   modMask            = myModMask,
   workspaces         = myWorkspaces,
-  normalBorderColor  = myNormalBorderColor,
-  focusedBorderColor = myFocusedBorderColor,
+  normalBorderColor 	= color0,
+  focusedBorderColor  	= color8,
   keys               = myKeys
---  mouseBindings      = myMouseBindings
   }
 
 
+--Bar
+myLogHook :: Handle -> X ()
+myLogHook h = dynamicLogWithPP ( defaultPP
+	{
+		  ppCurrent		= dzenColor color15 background .	pad
+		, ppVisible		= dzenColor color14 background . 	pad
+		, ppHidden		= dzenColor color14 background . 	pad
+		, ppHiddenNoWindows	= dzenColor background background .	pad
+		, ppWsSep		= ""
+		, ppSep			= "    "
+		, ppLayout		= wrap "^ca(1,xdotool key alt+space)" "^ca()" . dzenColor color2 background . id
+		, ppTitle	=  wrap "^ca(1,xdotool key alt+shift+x)" "^ca()" . dzenColor color15 background . shorten 60 . pad
+		, ppOrder	=  \(ws:l:t:_) -> [ws,l, t]
+		, ppOutput	=   hPutStrLn h
+	} )
 
-
-
+ 
 morekeys :: [((KeyMask, KeySym), X())]
 morekeys = [
        ((mod4Mask .|. shiftMask, xK_z), spawn "xscreensaver-command -lock"),
@@ -161,8 +145,8 @@ morekeys = [
        ((0, xK_Print), spawn "gnome-screenshot"),
 
        -- This is a cool program that acts like Alfred for Mac
-       ((mod4Mask, xK_x), spawn "lighthouse | sh"),
-
+--       ((mod4Mask, xK_x), spawn "lighthouse | sh"),
+       ((mod4Mask, xK_x), spawn "gmrun"),
        --toggle spaces in between windows
        ((mod4Mask, xK_b), sendMessage ToggleStruts),
 
@@ -172,14 +156,42 @@ morekeys = [
        ((0, 0x1008FF12), spawn myToggleMute),
        ((0, 0x1008FF05), spawn myDisplayBrightnessUp),
        ((0, 0x1008FF04), spawn myDisplayBrightnessDown),
+       
        --systen stuff ie logout, suspend, etc.
-       ((mod4Mask .|. shiftMask, xK_l), spawn "pmi action logout"),
-       ((mod4Mask .|. shiftMask, xK_s), spawn "pmi action suspend"),
-       ((mod4Mask .|. shiftMask, xK_h), spawn "pmi action hibernate"),
+       ((mod4Mask .|. shiftMask, xK_l), spawn "systemctl logout"),
+       ((mod4Mask .|. shiftMask, xK_s), spawn "systemctl suspend"),
+       ((mod4Mask .|. shiftMask, xK_h), spawn "systemctl hibernate"),
        ((myModMask, xK_e) , runOrRaise emacs (className =? "Emacs")),
        ((myModMask , xK_f), runOrRaise myBrowser (className =? "Firefox")),
+       
        --switch workspaces
        ((mod4Mask .|. controlMask, xK_Right), shiftToNext >> nextWS),
        ((mod4Mask .|. controlMask, xK_Left),   shiftToPrev >> prevWS)
     ]
 
+myBitmapsDir	= "~/.xmonad/dzen2/"
+
+myFont = "xft:Inconsolata:style=Semibold:pixelsize=20:antialias=true:hinting=slight"
+--myFont 		= "-*-tamsyn-medium-r-normal-*-12-87-*-*-*-*-*-*"
+--myFont = "-*-terminus-medium-*-normal-*-9-*-*-*-*-*-*-*"
+--myFont		= "-*-nu-*-*-*-*-*-*-*-*-*-*-*-*"
+
+-- EROSION EDIT
+background= "#3f3f3f"
+foreground= "#D6C3B6"
+color0=  "#332d29"
+color8=  "#817267"
+color1=  "#8c644c"
+color9=  "#9f7155"
+color2=  "#746C48"
+color10= "#9f7155"
+color3=  "#bfba92"
+color11= "#E0DAAC"
+color4=  "#646a6d"
+color12= "#777E82"
+color5=  "#766782"
+color13= "#897796"
+color6=  "#4B5C5E"
+color14= "#556D70"
+color7=  "#504339"
+color15= "#9a875f"

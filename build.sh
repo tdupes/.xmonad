@@ -5,7 +5,7 @@ files=(.vimperatorrc .xmobarrc  .zshrc .gnus .Xdefaults .bashrc .gtkrc-2.0 .xses
 
 for file in ${files[*]}
 do
-    echo creating link to $file in $HOME
-    ln -sf $file ~/
+    echo copyingfile: dotfiles/$file to $HOME
+    cp dotfiles/$file ~/
 done
 
