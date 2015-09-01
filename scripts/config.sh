@@ -7,9 +7,9 @@ highlight="#c0b18b"
 #XPOS=$(xdotool getmouselocation | awk -F " " '{print $1}' | cut -d ":" -f 2)
 YPOS="0"
 HEIGHT="12"
-XOFFSET=554
-if [[ -z `xrandr | grep " connected" | grep 'VGA'` ]]; then
-	XOFFSET="600"
+XOFFSET="0"
+if [[ ! -z `xrandr | grep " connected" | grep "$DP1" | grep "3840x2160"` ]]; then
+	XOFFSET="1225"
 fi
 
 #FONT="-artwiz-lime-medium-r-normal-*-10-110-75-75-m-50-iso8859-*"

@@ -1,9 +1,11 @@
+module TomsXmonadConfig where
+
 import XMonad
 import XMonad.Actions.CycleWS
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
 import XMonad.Util.Run(spawnPipe)
-import XMonad.Util.EZConfig(additionalKeys)
+import XMonad.Util.EZConfig
 import System.IO
 import XMonad.Layout.Spacing
 import XMonad.Config.Gnome
@@ -16,7 +18,7 @@ import XMonad.Hooks.EwmhDesktops hiding (fullscreenEventHook)
 import qualified XMonad.StackSet as W
 import qualified Data.Map as M
 import XMonad.Hooks.FadeInactive
-
+import Graphics.X11.ExtraTypes.XF86
 
 
 myWorkspaces :: [String]
@@ -38,6 +40,7 @@ myFocusedBorderColor = "#657b83"
 --------------------------------------------------------------------------
 
 -- Color of current window title in xmobar.
+xmobarTitleColor :: [Char]
 xmobarTitleColor = "green"
 
 -- Color of current workspace in xmobar.
@@ -52,8 +55,8 @@ myBrowser                = "firefox"
 myVolumeUp               = "amixer set Master 5+" -- && volume_popup.sh"
 myVolumeDown             = "amixer set Master 5-" -- && volume_popup.sh"
 myToggleMute             = "amixer set Master toggle  " -- && volume_popup.sh"
-myDisplayBrightnessUp    = "xbacklight -inc 5" -- && backlight_popup.sh"
-myDisplayBrightnessDown  = "xbacklight -dec 5" -- && backlight_popup.sh"
+myDisplayBrightnessUp    = "xbacklight -inc 20" -- && backlight_popup.sh"
+myDisplayBrightnessDown  = "xbacklight -dec 20" -- && backlight_popup.sh"
 myKeyboardBrightnessUp   = "kbdlight up"
 myKeyboardBrightnessDown = "kbdlight down"
 myTerminal               = "/usr/bin/urxvt -e zsh"
@@ -61,8 +64,8 @@ myFocusFollowsMouse      = False
 myKeys                   = keys defaultConfig
 ------------------------------------------------------------------------------
 
-myLayout = avoidStruts  ( {-tiled ||| -} smallspacing |||  nospace ||| Mirror nospace ||| Full) |||
-           noBorders (fullscreenFull Full)
+myLayout = avoidStruts  (smallspacing |||  nospace ||| Mirror nospace ||| Full) |||
+           noBorders Full
      where
        -- default tiling algorithm partitions the screen into two panes
        tiled = smartSpacing 20 $ Tall nmaster delta ratio
@@ -154,8 +157,8 @@ morekeys = [
        ((0, 0x1008FF11), spawn myVolumeDown),
        ((0, 0x1008FF13), spawn myVolumeUp),
        ((0, 0x1008FF12), spawn myToggleMute),
-       ((0, 0x1008FF05), spawn myDisplayBrightnessUp),
-       ((0, 0x1008FF04), spawn myDisplayBrightnessDown),
+       ((0, xF86XK_MonBrightnessUp), spawn myDisplayBrightnessUp),
+       ((0, xF86XK_MonBrightnessUp), spawn myDisplayBrightnessDown),
        
        --systen stuff ie logout, suspend, etc.
        ((mod4Mask .|. shiftMask, xK_l), spawn "systemctl logout"),
