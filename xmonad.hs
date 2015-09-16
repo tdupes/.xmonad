@@ -99,6 +99,7 @@ main = do
     spawn "feh --bg-scale /home/tom/Pictures/Lake-Mountain.jpg &"
     spawn "systemctl start wicd"
     spawn "systemctl enable wicd"
+    spawn "wmname LG3D."
     xmonad $ ewmh defaults {
           manageHook =  myManageHook <+> manageDocks
           , layoutHook = myLayout

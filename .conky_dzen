@@ -4,7 +4,7 @@ out_to_console yes
 out_to_x no
 # Update interval in seconds
 update_interval 1
-update_interval_on_battery 10
+update_interval_on_battery 5
  
 # ^ca(1,/home/tom/.xmonad/scripts/dzen_pacman.sh)  ^fg(\#3f3f3f)^i(/home/tom/.xmonad/dzen2/pacman.xbm) ^fg(\#bea492)${exec pacman -Qu | wc -l} updates  ^ca()\
 TEXT
