@@ -1,4 +1,5 @@
-module TomsXmonadConfig where
+-- module TomsXmonadConfig where
+--can't ahve this file for xmoand to recompile for some reason
 
 import XMonad
 import XMonad.Actions.CycleWS
@@ -22,18 +23,14 @@ import Graphics.X11.ExtraTypes.XF86
 
 
 myWorkspaces :: [String]
-myWorkspaces = clickable $ ["i"
-		,"ii"	
-		,"iii"	
-		,"iv"	
-		,"v"
-		,"vi"]	
-	where clickable l = [ "^ca(1,xdotool key alt+" ++ show (n) ++ ")" ++ ws ++ "^ca()" |
-				(i,ws) <- zip [1..] l,
-				let n = i ]
+myWorkspaces = clickable $ ["i", "ii", "iii", "iv", "v", "vi"]
+  where clickable l = [ "^ca(1,xdotool key alt+" ++ show (n) ++ ")" ++ ws ++ "^ca()" |
+                        (i,ws) <- zip [1..] l,
+                                 let n = i ]
 --------------------------------------------------------------------------
 -- Colors and borders
 --
+myNormalBorderColor, myFocusedBorderColor :: String
 myNormalBorderColor = "#002b36"
 myFocusedBorderColor = "#657b83"
 
@@ -44,12 +41,19 @@ xmobarTitleColor :: [Char]
 xmobarTitleColor = "green"
 
 -- Color of current workspace in xmobar.
+xmobarCurrentWorkspaceColor :: String
 xmobarCurrentWorkspaceColor = "#CEFFAC"
 
 -- Width of the window border in pixels.
-myBorderWidth = 1
+myBorderWidth :: Dimension
+myBorderWidth = 5
 
+
+myModMask :: KeyMask
 myModMask                = mod4Mask -- set Meta to windows key
+
+emacs, myBrowser, myVolumeUp, myVolumeDown, myToggleMute, myDisplayBrightnessUp :: String
+myDisplayBrightnessDown, myTerminal :: String
 emacs                    = "emacs"
 myBrowser                = "firefox"
 myVolumeUp               = "amixer set Master 5+" -- && volume_popup.sh"
@@ -57,14 +61,16 @@ myVolumeDown             = "amixer set Master 5-" -- && volume_popup.sh"
 myToggleMute             = "amixer set Master toggle  " -- && volume_popup.sh"
 myDisplayBrightnessUp    = "xbacklight -inc 20" -- && backlight_popup.sh"
 myDisplayBrightnessDown  = "xbacklight -dec 20" -- && backlight_popup.sh"
-myKeyboardBrightnessUp   = "kbdlight up"
-myKeyboardBrightnessDown = "kbdlight down"
 myTerminal               = "/usr/bin/urxvt -e zsh"
+
+myFocusFollowsMouse :: Bool
 myFocusFollowsMouse      = False
+
+myKeys :: XConfig Layout -> M.Map (ButtonMask, KeySym) (X ())
 myKeys                   = keys defaultConfig
 ------------------------------------------------------------------------------
 
-myLayout = avoidStruts  (smallspacing |||  nospace ||| Mirror nospace ||| Full) |||
+myLayout = avoidStruts $ smartBorders (tiled |||  nospace ||| Mirror nospace ||| Full ) |||
            noBorders Full
      where
        -- default tiling algorithm partitions the screen into two panes
@@ -89,13 +95,14 @@ myManageHook = composeAll
                <+>
                composeOne [ isFullscreen -?> doFullFloat ]
 
-myXmonadBar = "dzen2 -x '0' -y '0' -w '1600' -ta 'l' -fg '"++foreground++"' -bg '"++background++"' -fn "++myFont
+myXmonadBar, myStatusBar :: String
+myXmonadBar = "dzen2 -x '0' -y '0' -h '40' -w '1600' -ta 'l' -fg '"++foreground++"' -bg '"++background++"' -fn "++myFont
 myStatusBar = "/home/tom/.xmonad/status_bar '" ++ foreground ++ "' '" ++ background ++ "' " ++ myFont
                 
 main :: IO ()
 main = do
     dzenLeftBar <- spawnPipe myXmonadBar
-    dzenRightBAr <- spawnPipe myStatusBar    
+    dzenRightBar <- spawnPipe myStatusBar    
     spawn "feh --bg-scale /home/tom/Pictures/Lake-Mountain.jpg &"
     spawn "systemctl start wicd"
     spawn "systemctl enable wicd"
@@ -107,15 +114,15 @@ main = do
           , startupHook = setWMName "LG3D"
         } `additionalKeys` morekeys
 
-
+defaults :: XConfig (Choose Tall (Choose (Mirror Tall) Full))
 defaults = defaultConfig {
   terminal           = myTerminal,
   focusFollowsMouse  = myFocusFollowsMouse,
   borderWidth        = myBorderWidth,
   modMask            = myModMask,
   workspaces         = myWorkspaces,
-  normalBorderColor 	= color0,
-  focusedBorderColor  	= color8,
+  normalBorderColor  = color0,
+  focusedBorderColor = color8,
   keys               = myKeys
   }
 
@@ -134,6 +141,7 @@ myLogHook h = dynamicLogWithPP ( defaultPP
 		, ppTitle	=  wrap "^ca(1,xdotool key alt+shift+x)" "^ca()" . dzenColor color15 background . shorten 60 . pad
 		, ppOrder	=  \(ws:l:t:_) -> [ws,l, t]
 		, ppOutput	=   hPutStrLn h
+
 	} )
 
  
@@ -173,18 +181,22 @@ morekeys = [
        ((mod4Mask .|. controlMask, xK_Left),   shiftToPrev >> prevWS)
     ]
 
-myBitmapsDir	= "~/.xmonad/dzen2/"
+myBitmapsDir :: String
+myBitmapsDir = "~/.xmonad/dzen2/"
 
+myFont :: String
 myFont = "xft:Inconsolata:style=Semibold:pixelsize=20:antialias=true:hinting=slight"
 --myFont 		= "-*-tamsyn-medium-r-normal-*-12-87-*-*-*-*-*-*"
 --myFont = "-*-terminus-medium-*-normal-*-9-*-*-*-*-*-*-*"
 --myFont		= "-*-nu-*-*-*-*-*-*-*-*-*-*-*-*"
 
--- EROSION EDIT
-background= "#3f3f3f"
-foreground= "#D6C3B6"
+-- GruvBox EDIT
+background, foreground, color0, color8, color1, color9, color10, color2, color3, color11, color4 :: String
+color12, color5, color13, color6, color14, color7, color15 :: String
+background= "#282828"
+foreground= "#ebdbb2" 
 color0=  "#332d29"
-color8=  "#817267"
+color8=  "#ebdbb2"
 color1=  "#8c644c"
 color9=  "#9f7155"
 color2=  "#746C48"
@@ -198,4 +210,4 @@ color13= "#897796"
 color6=  "#4B5C5E"
 color14= "#556D70"
 color7=  "#504339"
-color15= "#9a875f"
+color15= "#bdae93"

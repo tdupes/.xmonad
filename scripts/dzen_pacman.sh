@@ -1,9 +1,9 @@
 #!/bin/bash
 source $(dirname $0)/config.sh
-XPOS=$((1200 + $XOFFSET))
-WIDTH="150"
+XPOS=$((2200 + $XOFFSET))
+WIDTH="500"
 pacmanlines=$(pacman -Qu | wc -l)
-LINES=$(( $pacmanlines + 2 ))
+LINES=$(( $pacmanlines + 3 ))
 
 updates=$(pacman -Qu)
 

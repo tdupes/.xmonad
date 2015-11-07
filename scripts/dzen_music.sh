@@ -1,6 +1,6 @@
 #!/bin/bash
 source $(dirname $0)/config.sh
-XPOS=$((1180 + $XOFFSET))
+XPOS=$((2490 + $XOFFSET))
 WIDTH="180"
 LINES="9"
 

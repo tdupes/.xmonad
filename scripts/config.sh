@@ -5,7 +5,7 @@ foreground="#6d715e"
 highlight="#c0b18b"
 
 #XPOS=$(xdotool getmouselocation | awk -F " " '{print $1}' | cut -d ":" -f 2)
-YPOS="0"
+YPOS="12"
 HEIGHT="12"
 XOFFSET="0"
 if [[ ! -z `xrandr | grep " connected" | grep "$DP1" | grep "3840x2160"` ]]; then
@@ -21,7 +21,7 @@ FONT="xft:Inconsolata:style=Semibold:pixelsize=20:antialias=true:hinting=slight"
 #FONT="-*-tewi-medium-*-normal-*-*-*-*-*-*-*-*-*"
 white0="#775759"
 
-bar_bg="#1f1f1f"
-bar_fg="#d17b49"
-notify="#d17b49"
-warning="#d17b49"
+bar_bg="#282828"
+bar_fg="#ebdbb2" 
+notify="#d65d0e"
+warning="#98971a"

@@ -1,7 +1,7 @@
 #!/bin/bash
 source $(dirname $0)/config.sh
-XPOS=$((1900 + $XOFFSET))
-WIDTH="180"
+XPOS=$((2830 + $XOFFSET))
+WIDTH="230"
 LINES="10"
 
 datea=$(date +%a)

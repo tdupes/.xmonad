@@ -1,15 +1,15 @@
 #!/bin/bash
 source $(dirname $0)/config.sh
 XPOS=$((3000 + $XOFFSET))
-WIDTH="350"
-LINES="15"
+WIDTH="375"
+LINES="19"
 
 cputemp="^fg($white0)^i(/home/tom/.xmonad/dzen2/temp.xbm)^fg() Temp ^fg($highlight)$(sensors | grep "temp1" | cut -d'+' -f2 | head -c2)F"
 cpuutiluser=$(iostat -c | sed -n "4p" | awk -F " " '{print $1}')
 cpuutilsystem=$(iostat -c | sed -n "4p" | awk -F " " '{print $3}')
 cpuutilidle=$(iostat -c | sed -n "4p" | awk -F " " '{print $6}')
-ramtotal=$(free -m | sed -n "3p" | awk -F " " '{print $4}')
-ramused=$(free -m | sed -n "3p" | awk -F " " '{print $3}')
+ramtotal=$(free -m | sed -n "2p" | awk -F " " '{print $2}')
+ramused=$(free -m | sed -n "2p" | awk -F " " '{print $3}')
 
 kernel="^fg($white0)^i(/home/tom/.xmonad/dzen2/arch_10x10.xbm)^fg() Kernel ^fg($highlight)$(uname -r)"
 packages="^fg($white0)^i(/home/tom/.xmonad/dzen2/pacman.xbm)^fg() Packages ^fg($highlight)$(pacman -Q | wc -l)"
@@ -31,4 +31,4 @@ mem_bar=`/home/tom/.xmonad/scripts/bar_ram_lg.sh`
 sda_bar=`/home/tom/.xmonad/scripts/bar_disk.sh /dev/sda`
 sdb_bar=`/home/tom/.xmonad/scripts/bar_disk.sh /dev/sdb`
 
-(echo " ^fg($highlight)System"; echo "              $kernel"; echo "        $packages   $uptime"; echo " "; echo " $cpu_bar_0"; echo " $cpu_bar_1"; echo " $cpu_bar_2"; echo " $cpu_bar_3"; echo "                 $cputemp"; echo " ";  echo " $mem_bar"; echo "                 ^fg($highlight)$ramused MB / $ramtotal MB"; echo " "; echo " $sda_bar"; echo " $sdb_bar"; sleep 10) | dzen2 -fg $foreground -bg  $background -fn $FONT -x $XPOS -y $YPOS -w $WIDTH -l $LINES -e 'onstart=uncollapse,hide;button1=exit;button3=exit'
+(echo " ^fg($highlight)System"; echo "$kernel"; echo "$packages"; echo "$uptime"; echo " "; echo " $cpu_bar_0"; echo " $cpu_bar_1"; echo " $cpu_bar_2"; echo " $cpu_bar_3"; echo "                 $cputemp"; echo " ";  echo " $mem_bar"; echo "                 ^fg($highlight)$ramused MB / $ramtotal MB"; echo " "; echo " $sda_bar"; echo " $sdb_bar"; sleep 10) | dzen2 -fg $foreground -bg  $background -fn $FONT -x $XPOS -y $YPOS -w $WIDTH -l $LINES -e 'onstart=uncollapse,hide;button1=exit;button3=exit'

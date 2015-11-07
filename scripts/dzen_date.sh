@@ -1,7 +1,7 @@
 #!/bin/bash
 source $(dirname $0)/config.sh
-XPOS=$((2650 + $XOFFSET))
-WIDTH="200"
+XPOS=$((2600 + $XOFFSET))
+WIDTH="230"
 LINES="12"
 
 #totaldays=$(date +"%j")

@@ -3,21 +3,19 @@ background yes
 out_to_console yes
 out_to_x no
 # Update interval in seconds
-update_interval 1
-update_interval_on_battery 5
+update_interval 5
+update_interval_on_battery 10
  
-# ^ca(1,/home/tom/.xmonad/scripts/dzen_pacman.sh)  ^fg(\#3f3f3f)^i(/home/tom/.xmonad/dzen2/pacman.xbm) ^fg(\#bea492)${exec pacman -Qu | wc -l} updates  ^ca()\
+# ^ca(1,/home/tom/.xmonad/scripts/dzen_pacman.sh)  ^fg(\#ebdbb2)^i(/home/tom/.xmonad/dzen2/pacman.xbm) ^fg(\#bea492)${exec pacman -Qu | wc -l} updates  ^ca()\
 TEXT
-^fg(\#3f3f3f)^i(/home/tom/xmonad/dzen2/cpu.xbm) ^fg(\#bea492)Cpu0: ${cpu cpu0}% | ^fg() \
-^fg(\#3f3f3f)^i(/home/tom/xmonad/dzen2/cpu.xbm) ^fg(\#bea492)Cpu1: ${cpu cpu1}% | ^fg()\
-^fg(\#3f3f3f)^i(/home/tom/xmonad/dzen2/cpu.xbm) ^fg(\#bea492)Cpu2: ${cpu cpu2}% | ^fg()\
-^fg(\#3f3f3f)^i(/home/tom/xmonad/dzen2/cpu.xbm) ^fg(\#bea492)Cpu3: ${cpu cpu3}% ||| ^fg()\
-^fg(\#3f3f3f)^i(/home/tom/xmonad/dzen2/cpu.xbm) ^fg(\#bea492)Mem: ${memperc}% , ${mem} ||| ^fg()\
-^ca(1,/home/tom/.xmonad/sc /home/tom/.xmonad/scripts/dzen_music.sh)$if_mpd_playing^fg(\#3f3f3f)^i(/home/tom/.xmonad/dzen2/note.xbm) ^fg(\#bea492)${mpd_artist}   ^ca()\
-^ca(1,/home/tom/.xmonad/sc /home/tom/.xmonad/scripts/dzen_date.sh)   ^fg(\#3f3f3f)^i(/home/tom/.xmonad/dzen2/clock.xbm) ^fg(\#bea492)${time %I:%M %P}   ^ca()\
-^ca(1,/home/tom/.xmonad/sc /home/tom/.xmonad/scripts/dzen_network.sh)   ^fg(\#3f3f3f)${execi 2 /home/tom/.xmonad/scripts/bar_wifi.sh} ^fg(\#bea492)${wireless_essid wlan0}   ^ca()\
-^ca(1,/home/tom/.xmonad/sc /home/tom/.xmonad/scripts/dzen_vol.sh)   ^fg(\#3f3f3f)${execi 2 /home/tom/.xmonad/scripts/bar_vol.sh}^fg(\#bea492)   ^ca()\
-^ca(1,/home/tom/.xmonad/sc /home/tom/.xmonad/scripts/dzen_battery.sh)   ^fg(\#3f3f3f) ${execi 2 /home/tom/.xmonad/scripts/bar_battery.sh}^fg(\#bea492)   ^ca()\
-^ca(1,/home/tom/.xmonad/sc /home/tom/.xmonad/scripts/dzen_hardware.sh)   ^fg(\#3f3f3f)${execi 2 /home/tom/.xmonad/scripts/bar_ram.sh}^fg(\#bea492)   ^ca()\
-^ca(1,/home/tom/.xmonad/sc /home/tom/.xmonad/scripts/dzen_log.sh)^fg(\#3f3f3f)^i(/home/tom/.xmonad/dzen2/info_03.xbm)^fg(\#bea492)^ca()
+^fg(\#ebdbb2)^i(/home/tom/xmonad/dzen2/cpu.xbm) ^fg(\#ebdbb2)CPU  ${cpu cpu0}% ${cpu cpu1}% ${cpu cpu2}% ${cpu cpu3}%  ^fg()\
+^fg(\#ebdbb2)^i(/home/tom/xmonad/dzen2/cpu.xbm) ^fg(\#ebdbb2)MEM: ${memperc}% , ${mem} ^fg()\
+^ca(1,/home/tom/.xmonad/sc /home/tom/.xmonad/scripts/dzen_music.sh)$if_mpd_playing^fg(\#ebdbb2)^i(/home/tom/.xmonad/dzen2/note.xbm) ^fg(\#ebdbb2)${mpd_artist}   ^ca()\
+^ca(1,/home/tom/.xmonad/sc /home/tom/.xmonad/scripts/dzen_date.sh)      ^fg(\#ebdbb2)^i(/home/tom/.xmonad/dzen2/clock.xbm) ^fg(\#ebdbb2)${time %I:%M %P}   ^ca()\
+^ca(1,/home/tom/.xmonad/sc /home/tom/.xmonad/scripts/dzen_network.sh)   ^fg(\#ebdbb2)${execi 2 /home/tom/.xmonad/scripts/bar_wifi.sh} ^fg(\#ebdbb2)${wireless_essid wlan0}   ^ca()\
+^ca(1,/home/tom/.xmonad/sc /home/tom/.xmonad/scripts/dzen_vol.sh)       ^fg(\#ebdbb2)${execi 2 /home/tom/.xmonad/scripts/bar_vol.sh}^fg(\#ebdbb2)   ^ca()\
+^ca(1,/home/tom/.xmonad/sc /home/tom/.xmonad/scripts/dzen_battery.sh)   ^fg(\#ebdbb2) ${execi 2 /home/tom/.xmonad/scripts/bar_battery.sh}^fg(\#ebdbb2)   ^ca()\
+^ca(1,/home/tom/.xmonad/sc /home/tom/.xmonad/scripts/dzen_hardware.sh)  ^fg(\#ebdbb2)${execi 2 /home/tom/.xmonad/scripts/bar_ram.sh}^fg(\#ebdbb2)   ^ca()\
+^ca(1,/home/tom/.xmonad/sc /home/tom/.xmonad/scripts/dzen_log.sh)       ^fg(\#ebdbb2)^i(/home/tom/.xmonad/dzen2/info_03.xbm)^fg(\#ebdbb2)^ca()\
+^ca(1,/home/tom/.xmonad/sc /home/tom/.xmonad/scripts/dzen_pacman.sh)    ^fg(\#ebdbb2)^i(/home/tom/.xmonad/dzen2/pacman.xbm)^fg(\#ebdbb2)^ca()
 

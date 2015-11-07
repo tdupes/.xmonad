@@ -1,7 +1,7 @@
 #!/bin/bash
 source $(dirname $0)/config.sh
-XPOS=$((2800 + $XOFFSET))
-WIDTH="250"
+XPOS=$((2720 + $XOFFSET))
+WIDTH="400"
 LINES="8"
 
 essid=$(iwconfig wlp2s0 | sed -n "1p" | awk -F '"' '{print $2}')
