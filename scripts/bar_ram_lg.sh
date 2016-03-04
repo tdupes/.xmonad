@@ -1,8 +1,8 @@
 #!/bin/bash
 source $(dirname $0)/config.sh
 
-FREE=`free -m | awk 'NR == 3 {gsub(/%/,""); print $3}'`
-MAX=`free -m | awk 'NR == 2 {gsub(/%/,""); print $2}'`
+FREE=`free -m | grep Mem | awk 'NR 3 {gsub(/%/,""); print $3}'`
+MAX=`free -m | grep Mem | awk 'NR 2 {gsub(/%/,""); print $2}'`
 PERC=`echo $FREE*100/$MAX | bc`
 
 ICON="mem.xbm"

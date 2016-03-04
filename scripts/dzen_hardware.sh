@@ -2,9 +2,9 @@
 source $(dirname $0)/config.sh
 XPOS=$((3000 + $XOFFSET))
 WIDTH="375"
-LINES="19"
+LINES="18"
 
-cputemp="^fg($white0)^i(/home/tom/.xmonad/dzen2/temp.xbm)^fg() Temp ^fg($highlight)$(sensors | grep "temp1" | cut -d'+' -f2 | head -c2)F"
+cputemp="^fg($white0)^i(/home/tom/.xmonad/dzen2/temp.xbm)^fg() Temp ^fg($highlight)$(sensors | grep "temp1" | cut -d'+' -f2 | head -c2)C"
 cpuutiluser=$(iostat -c | sed -n "4p" | awk -F " " '{print $1}')
 cpuutilsystem=$(iostat -c | sed -n "4p" | awk -F " " '{print $3}')
 cpuutilidle=$(iostat -c | sed -n "4p" | awk -F " " '{print $6}')
@@ -28,7 +28,9 @@ cpu_bar_3=`/home/tom/.xmonad/scripts/bar_cpu.sh 4`
 
 mem_bar=`/home/tom/.xmonad/scripts/bar_ram_lg.sh`
 
-sda_bar=`/home/tom/.xmonad/scripts/bar_disk.sh /dev/sda`
-sdb_bar=`/home/tom/.xmonad/scripts/bar_disk.sh /dev/sdb`
+# sda_bar=`/home/tom/.xmonad/scripts/bar_disk.sh /dev/sda`
+sda1_bar=`/home/tom/.xmonad/scripts/bar_disk.sh /dev/sda1`
+sda2_bar=`/home/tom/.xmonad/scripts/bar_disk.sh /dev/sda2`
+sda4_bar=`/home/tom/.xmonad/scripts/bar_disk.sh /dev/sda4`
 
-(echo " ^fg($highlight)System"; echo "$kernel"; echo "$packages"; echo "$uptime"; echo " "; echo " $cpu_bar_0"; echo " $cpu_bar_1"; echo " $cpu_bar_2"; echo " $cpu_bar_3"; echo "                 $cputemp"; echo " ";  echo " $mem_bar"; echo "                 ^fg($highlight)$ramused MB / $ramtotal MB"; echo " "; echo " $sda_bar"; echo " $sdb_bar"; sleep 10) | dzen2 -fg $foreground -bg  $background -fn $FONT -x $XPOS -y $YPOS -w $WIDTH -l $LINES -e 'onstart=uncollapse,hide;button1=exit;button3=exit'
+(echo " ^fg($highlight)System"; echo "$kernel"; echo "$packages"; echo "$uptime"; echo " "; echo " $cpu_bar_0"; echo " $cpu_bar_1"; echo " $cpu_bar_2"; echo " $cpu_bar_3"; echo "                 $cputemp"; echo " ";  echo " $mem_bar"; echo "                 ^fg($highlight)$ramused MB / $ramtotal MB"; echo " "; echo " $sda1_bar"; echo " $sda2_bar";echo " $sda4_bar"; sleep 10) | dzen2 -fg $foreground -bg  $background -fn $FONT -x $XPOS -y $YPOS -w $WIDTH -l $LINES -e 'onstart=uncollapse,hide;button1=exit;button3=exit'
