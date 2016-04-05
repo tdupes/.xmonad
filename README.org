@@ -1,0 +1,13 @@
+
+
+
+
+This repo is my set up for XMonad as well as all my other dotfiles (except
+Emacs which has its own repo). 
+
+It relies on stow to farm the dotfiles in the /dotfiles folders.
+
+
+MY XMonad and dzen configurations are Shamelessly ripped off from windelicato
+who's original files are here: https://github.com/windelicato/dotfiles. I mostly
+made some aesthetic changes as well as modified it for HIDPI (4k) screens.

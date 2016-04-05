@@ -33,7 +33,7 @@ import Data.Char (toLower)
 
 myWorkspaces :: [String]
 myWorkspaces = clickable $ ["I", "II", "III", "IV", "V", "VI"]
-  where clickable l = [ "^ca(1,xdotool key super+" ++ show (n) ++ ")" ++ ws ++ "^ca()" |
+  where clickable l = [ "^ca(1,xdotool key super+" ++ show n ++ ")" ++ ws ++ "^ca()" |
                         (i,ws) <- zip [1..] l,
                                  let n = i ]
 --------------------------------------------------------------------------
@@ -64,14 +64,21 @@ myKeys :: XConfig Layout -> M.Map (ButtonMask, KeySym) (X ())
 myKeys                   = keys defaultConfig
 ------------------------------------------------------------------------------
 
-myLayout =  avoidStruts $  smartBorders (mainStyle ||| tiled ||| spiralLayout ||| Full)
+myLayout =  avoidStruts $  smartBorders (mainGaps
+                                         ||| secondaryGaps -- ||| tiled
+                                         ||| fullGaps
+                                         ||| spiralLayout
+                                         ||| Full )
      where
-       mainStyle = gaps [(U,140), (R,40), (L,40), (D,40)] $ tiled 
-       tiled = smartSpacing 40 $ Tall nmaster delta ratio
-       spiralLayout = spiral (5/7)
-       nmaster = 1    -- The default number of windows in the master pane
-       ratio = 1/2    -- Default proportion of screen occupied by master pane
-       delta = 3/100  -- Percent of screen to increment by when resizing panes
+       mygaps        = gaps [(U,180), (R,80), (L,80), (D,60)] 
+       mainGaps      = mygaps tiled
+       secondaryGaps = mygaps spiralLayout
+       fullGaps      = mygaps Full
+       tiled         = smartSpacing 40 $ Tall nmaster delta ratio
+       spiralLayout  = spiral (5/7)
+       nmaster       = 1    -- The default number of windows in the master pane
+       ratio         = 1/2    -- Default proportion of screen occupied by master pane
+       delta         = 3/100  -- Percent of screen to increment by when resizing panes
        
 
 myManageHook :: Query (Data.Monoid.Endo WindowSet)
@@ -87,9 +94,9 @@ myManageHook = composeAll
                composeOne [ isFullscreen -?> doFullFloat ]
 
 myXmonadBar, myStatusBar :: String
-myXmonadBar = "dzen2 -x '40' -y '40' -h '60' -w '1800' -ta 'l' -fg '"++ foreground ++
+myXmonadBar = "dzen2 -x '80' -y '60' -h '80' -w '2000' -ta 'l' -fg '"++ foreground ++
               "' -bg '"  ++ background ++ "' -fn "++myFont
-myStatusBar = "/home/tom/.xmonad/status_bar '" ++ foreground ++ "' '" ++ background ++ "' " ++ myFont
+myStatusBar = "/home/tom/.xmonad/status_bar '" ++ blue ++ "' '" ++ background ++ "' " ++ myFont
                 
 main :: IO ()
 main = do
@@ -135,13 +142,13 @@ myPP = dzenPP {
       , ppHidden = dzenColor blue fg4 . pad
       , ppHiddenNoWindows = dzenColor bg3 fg4 . pad 
       , ppWsSep = ""
-      , ppSep =  "|"
+      , ppSep =  ""
       , ppLayout = wrap "^ca(1,xdotool key super+space)" "^ca()" .
                    dzenColor bg3 bg1 .
                    wrap " " " " . 
                    map toLower
       , ppTitle =  wrap "^ca(1,xdotool key super+shift+x)" "^ca()" .
-                   dzenColor bg2 bg0 . shorten 150 . pad
+                   dzenColor bg2 bg0 . shorten 200 . pad
       , ppOrder =  \(ws:l:t:_) -> [ws,l, t]
       }
 --Bar
@@ -150,7 +157,7 @@ myLogHook h = dynamicLogWithPP (myPP {
                                     ppOutput = hPutStrLn h
                                     } )
 
-morekeys :: [((KeyMask, KeySym), X())]
+morekeys :: [((KeyMask, KeySym), X ())]
 morekeys = [
        ((mod4Mask .|. shiftMask, xK_z), spawn "xscreensaver-command -lock"),
 
@@ -196,7 +203,7 @@ myFont :: String
 --myFont = "-*-tamsyn-medium-r-normal-*-12-87-*-*-*-*-*-*"
 myFont = "-*-terminus-medium-*-normal-*-30-*-*-*-*-*-*-*"
 --myFont = "-*-nu-*-*-*-*-*-*-*-*-*-*-*-*"
-
+myFont2  ="-*-tamsyn-medium-r-normal-*-12-*-*-*-*-*-*-1"
 -- GruvBox EDIT
 
 background = "#282828"
@@ -213,7 +220,7 @@ purple = "b16286"  -- 5
 aqua = "#689d61"   -- 6
 gray = "#a89984"   -- 7
 
-gray2 = "928374"   -- 8
+gray2 = "#928374"   -- 8
 red2 = "#fb4934"   -- 9
 green2 = "#fabd2f" -- 10
 yellow2 = "#fabd2f"-- 11

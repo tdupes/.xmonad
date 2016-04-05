@@ -9,13 +9,13 @@ update_interval_on_battery 10
 # ^ca(1,/home/tom/.xmonad/scripts/dzen_pacman.sh)  ^fg(\#ebdbb2)^i(/home/tom/.xmonad/dzen2/pacman.xbm) ^fg(\#bea492)${exec pacman -Qu | wc -l} updates  ^ca()\
 # ^fg(\#ebdbb2)CPU  ${cpu cpu0}% ${cpu cpu1}% ${cpu cpu2}% ${cpu cpu3}%  ^fg()\
 # ^fg(\#ebdbb2)MEM: ${memperc}% , ${mem} ^fg()\
+#^ca(1,/home/tom/.xmonad/sc /home/tom/.xmonad/scripts/dzen_music.sh)$if_mpd_playing^fg(\#ebdbb2)^i(/home/tom/.xmonad/dzen2/note.xbm) ^fg(\#ebdbb2)${mpd_artist}   ^ca()\
 TEXT
-^ca(1,/home/tom/.xmonad/sc /home/tom/.xmonad/scripts/dzen_music.sh)$if_mpd_playing^fg(\#ebdbb2)^i(/home/tom/.xmonad/dzen2/note.xbm) ^fg(\#ebdbb2)${mpd_artist}   ^ca()\
-^ca(1,/home/tom/.xmonad/sc /home/tom/.xmonad/scripts/dzen_date.sh)      ^fg(\#ebdbb2)^i(/home/tom/.xmonad/dzen2/clock.xbm) ^fg(\#ebdbb2)${time %I:%M %P}   ^ca()\
-^ca(1,/home/tom/.xmonad/sc /home/tom/.xmonad/scripts/dzen_network.sh)   ^fg(\#ebdbb2)${execi 2 /home/tom/.xmonad/scripts/bar_wifi.sh} ^fg(\#ebdbb2)${wireless_essid wlan0}   ^ca()\
-^ca(1,/home/tom/.xmonad/sc /home/tom/.xmonad/scripts/dzen_vol.sh)       ^fg(\#ebdbb2)${execi 2 /home/tom/.xmonad/scripts/bar_vol.sh}^fg(\#ebdbb2)   ^ca()\
-^ca(1,/home/tom/.xmonad/sc /home/tom/.xmonad/scripts/dzen_battery.sh)   ^fg(\#ebdbb2) ${execi 2 /home/tom/.xmonad/scripts/bar_battery.sh}^fg(\#ebdbb2)   ^ca()\
-^ca(1,/home/tom/.xmonad/sc /home/tom/.xmonad/scripts/dzen_hardware.sh)  ^fg(\#ebdbb2)${execi 2 /home/tom/.xmonad/scripts/bar_ram.sh}^fg(\#ebdbb2)   ^ca()\
-^ca(1,/home/tom/.xmonad/sc /home/tom/.xmonad/scripts/dzen_log.sh)       ^fg(\#ebdbb2)^i(/home/tom/.xmonad/dzen2/info_03.xbm)^fg(\#ebdbb2)^ca()\
-^ca(1,/home/tom/.xmonad/sc /home/tom/.xmonad/scripts/dzen_pacman.sh)    ^fg(\#ebdbb2)^i(/home/tom/.xmonad/dzen2/pacman.xbm)^fg(\#ebdbb2)^ca()
+^ca(1,/home/tom/.xmonad/sc /home/tom/.xmonad/scripts/dzen_date.sh)      ^bg(\#3c3836)^fg(\#98971a)^i(/home/tom/.xmonad/dzen2/clock.xbm) ^fg(\#665c54)${time %I:%M %P}   ^ca()\
+^ca(1,/home/tom/.xmonad/sc /home/tom/.xmonad/scripts/dzen_network.sh)   ^bg(\#a89984)^fg(\#458588)${execi 2 /home/tom/.xmonad/scripts/bar_wifi.sh} ^fg(\#458588)${wireless_essid wlan0}   ^ca()\
+^ca(1,/home/tom/.xmonad/sc /home/tom/.xmonad/scripts/dzen_vol.sh)       ^fg(\#1d2021)${execi 2 /home/tom/.xmonad/scripts/bar_vol.sh}^fg(\#458588)   ^ca()\
+^ca(1,/home/tom/.xmonad/sc /home/tom/.xmonad/scripts/dzen_battery.sh)   ^fg(\#1d2021) ${execi 2 /home/tom/.xmonad/scripts/bar_battery.sh}^fg(\#ebdbb2)   ^ca()\
+^ca(1,/home/tom/.xmonad/sc /home/tom/.xmonad/scripts/dzen_hardware.sh)  ^fg(\#1d2021)${execi 2 /home/tom/.xmonad/scripts/bar_ram.sh}^fg(\#ebdbb2)   ^ca()\
+^ca(1,/home/tom/.xmonad/sc /home/tom/.xmonad/scripts/dzen_log.sh)       ^fg(\#1d2021)^i(/home/tom/.xmonad/dzen2/info-Big.xbm)^fg(\#ebdbb2)^ca()\
+^ca(1,/home/tom/.xmonad/sc /home/tom/.xmonad/scripts/dzen_pacman.sh)    ^fg(\#1d2021)^i(/home/tom/.xmonad/dzen2/Pacman.xbm)^fg(\#ebdbb2)^ca()
 

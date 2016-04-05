@@ -1,8 +1,8 @@
 #!/bin/bash
 
-background="#1f1f1f"
+background="#3c3836"
 foreground="#6d715e"
-highlight="#c0b18b"
+highlight="#b8bb26"
 
 #XPOS=$(xdotool getmouselocation | awk -F " " '{print $1}' | cut -d ":" -f 2)
 YPOS="12"
@@ -21,9 +21,9 @@ FONT="xft:Inconsolata:style=Semibold:pixelsize=20:antialias=true:hinting=slight"
 #FONT="-*-tamsyn-medium-r-normal-*-10-110-75-75-m-50-iso8859-*"
 #FONT='-*-lemon-*-*-*-*-*-*-75-75-*-*-*-*'
 #FONT="-*-tewi-medium-*-normal-*-*-*-*-*-*-*-*-*"
-white0="#775759"
+white0="#fbf1c7"
 
 bar_bg="#282828"
-bar_fg="#ebdbb2" 
-notify="#d65d0e"
-warning="#98971a"
+bar_fg="#cc241d" 
+notify="#fb4934"
+warning="#cc241d"

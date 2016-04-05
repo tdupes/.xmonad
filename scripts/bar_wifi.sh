@@ -23,6 +23,7 @@ color=""
 # fi
 
 ICON="wireless5.xbm"
+ICON="connection-bars-small.xbm"
 
 ICON='^i(/home/tom/.xmonad/dzen2/'"$ICON)"
 echo "$color$ICON"

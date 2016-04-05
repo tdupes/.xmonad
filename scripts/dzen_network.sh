@@ -3,6 +3,7 @@ source $(dirname $0)/config.sh
 XPOS=$((2525 + $XOFFSET))
 WIDTH="400"
 LINES="8"
+foreground="#fb4934"
 
 essid=$(iwconfig wlp2s0 | sed -n "1p" | awk -F '"' '{print $2}')
 mode=$(iwconfig wlp2s0 | sed -n "1p" | awk -F " " '{print $3}')

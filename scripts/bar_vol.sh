@@ -7,11 +7,11 @@ ASTAT=`amixer get Master | awk 'END{gsub(/\[|\]|%/,""); print $6}'`
 ICON=""
 
 if [[ $ASTAT = "on" ]]; then
-    ICON="spkr_01.xbm"
+    ICON="audioHigh.xbm" #"spkr_01.xbm"
     PERCBAR=`echo "$AMASTER"\
         | gdbar -bg $bar_bg -fg $bar_fg -h 1 -w 50`
 else
-    ICON="spkr_02.xbm"
+    ICON="audio-volume-muted.xbm"
     PERCBAR=`echo 0 \
         | gdbar -bg $bar_bg -fg $bar_fg -h 1 -w 50`
 fi
