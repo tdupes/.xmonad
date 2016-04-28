@@ -16,7 +16,7 @@ fi
 
 #FONT="-artwiz-lime-medium-r-normal-*-10-110-75-75-m-50-iso8859-*"
 #FONT="-*-dweep-medium-r-semicondensed-*-11-*-*-*-*-*-*-*"
-FONT="xft:Inconsolata:style=Semibold:pixelsize=20:antialias=true:hinting=slight"
+FONT="xft:Inconsolata:style=Semibold:pixelsize=12:antialias=true:hinting=slight"
 #FONT="-artwiz-limey-medium-r-normal-*-10-110-75-75-m-50-iso8859-*"
 #FONT="-*-tamsyn-medium-r-normal-*-10-110-75-75-m-50-iso8859-*"
 #FONT='-*-lemon-*-*-*-*-*-*-75-75-*-*-*-*'

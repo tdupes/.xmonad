@@ -15,4 +15,4 @@ else
 fi
 
 ICON='^i(/home/tom/.xmonad/dzen2/'"$ICON)"
-echo "$ICON $PERCBAR"
+echo "$ICON $PERC%"

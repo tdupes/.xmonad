@@ -138,17 +138,17 @@ defaults = defaultConfig {
 myPP :: PP
 myPP = dzenPP {
         ppCurrent = dzenColor bg blue . pad 
-      , ppVisible = dzenColor blue fg4 . pad
-      , ppHidden = dzenColor blue fg4 . pad
-      , ppHiddenNoWindows = dzenColor bg3 fg4 . pad 
+      , ppVisible = dzenColor blue bg . pad
+      , ppHidden = dzenColor blue bg . pad
+      , ppHiddenNoWindows = dzenColor bg3 bg . pad 
       , ppWsSep = ""
-      , ppSep =  ""
+      , ppSep =  "|"
       , ppLayout = wrap "^ca(1,xdotool key super+space)" "^ca()" .
-                   dzenColor bg3 bg1 .
+                   dzenColor aqua2 bg .
                    wrap " " " " . 
                    map toLower
       , ppTitle =  wrap "^ca(1,xdotool key super+shift+x)" "^ca()" .
-                   dzenColor bg2 bg0 . shorten 200 . pad
+                   dzenColor fg bg0 . shorten 200 . pad
       , ppOrder =  \(ws:l:t:_) -> [ws,l, t]
       }
 --Bar
