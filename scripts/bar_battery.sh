@@ -48,5 +48,5 @@ fi
 
 #color=""
 ICON='^i(/home/tom/.xmonad/dzen2/'"$ICON)"
-echo "$color$ICON $BAT %"
+echo "$color$ICON $BAT%"
 # $BATBAR"

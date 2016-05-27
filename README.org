@@ -6,3 +6,6 @@ MY XMonad and dzen configurations are Shamelessly ripped off from windelicato
 who's original files are here: https://github.com/windelicato/dotfiles. I mostly
 made some aesthetic changes as well as modified it for HIDPI (4k) screens.
 
+My status bar (dzen) is configured for a 3200x1800 laptop (I'm currently on the
+Dell XPS 13) and a 4k (3840x2160) monitor with mirroring on the desktop, not
+extending.
