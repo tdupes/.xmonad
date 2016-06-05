@@ -32,7 +32,7 @@ import Data.Monoid
 import Data.Char (toLower)
 
 myWorkspaces :: [String]
-myWorkspaces = clickable $ ["I", "II", "III", "IV", "V", "VI"]
+myWorkspaces = clickable ["I", "II", "III", "IV", "V"]
   where clickable l = [ "^ca(1,xdotool key super+" ++ show n ++ ")" ++ ws ++ "^ca()" |
                         (i,ws) <- zip [1..] l,
                                  let n = i ]
@@ -199,9 +199,9 @@ myBitmapsDir = "~/.xmonad/dzen2/"
 myFont :: String
 -- myFont = "xft:Sauce\\ Code\\ Powerline\\ Black:style=Regular:pixelsize=40:antialias=true:hinting=slight"
 --myFont = "xft:MesloLGLRegularforPowerline:style=Regular:pixelsize=40:antialias=true:hinting=slight"
---myFont = "xft:DejavuSansMonoforPowerline:style=Semibold:pixelsize=40:antialias=true:hinting=slight"
+myFont = "xft:DejavuSansMonoforPowerline:style=Semibold:pixelsize=30:antialias=true:hinting=slight"
 --myFont = "-*-tamsyn-medium-r-normal-*-12-87-*-*-*-*-*-*"
-myFont = "-*-terminus-medium-*-normal-*-30-*-*-*-*-*-*-*"
+-- myFont = "-*-terminus-medium-*-normal-*-30-*-*-*-*-*-*-*"
 --myFont = "-*-nu-*-*-*-*-*-*-*-*-*-*-*-*"
 myFont2  ="-*-tamsyn-medium-r-normal-*-12-*-*-*-*-*-*-1"
 -- GruvBox EDIT

@@ -14,4 +14,4 @@ else
 fi
 
 ICON='^i(/home/tom/.xmonad/dzen2/'"$ICON)"
-echo "$ICON $PERC"
+echo "$ICON$PERC"
