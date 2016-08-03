@@ -63,7 +63,7 @@ myTerminal               = "/usr/bin/urxvt -e zsh"
 
 dmenu :: String
 dmenu = "dmenu_run -fn 'Dejavu Sans Mono for Powerline' -nb '" ++ bg ++ "' -nf '" ++ fg ++
-        "' -x 850 -y 60 -w '1600' -h '80' -p \\> -q"
+        "' -x 80 -y 60 -w '2000' -h '80' -p \\> -q"
 
 myFocusFollowsMouse :: Bool
 myFocusFollowsMouse = False
