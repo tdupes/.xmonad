@@ -62,8 +62,9 @@ myDisplayBrightnessDown  = "xbacklight -dec 5" -- && backlight_popup.sh"
 myTerminal               = "/usr/bin/urxvt -e zsh"
 
 dmenu :: String
-dmenu = "dmenu_run -fn 'Dejavu Sans Mono for Powerline' -nb '" ++ bg ++ "' -nf '" ++ fg ++
-        "' -x 80 -y 60 -w '2000' -h '80' -p \\> -q"
+-- dmenu = "dmenu_run -fn 'Dejavu Sans Mono for Powerline' -nb '" ++ bg ++ "' -nf '" ++ fg ++
+--         "' -x 80 -y 60 -w '2000' -h '80' -p \\> -q"
+dmenu = "~/.xmonad/run_dmenu"
 
 myFocusFollowsMouse :: Bool
 myFocusFollowsMouse = False
@@ -78,7 +79,7 @@ myLayout =  avoidStruts $  smartBorders (mainGaps
                                          ||| spiralLayout
                                          ||| Full )
      where
-       mygaps        = gaps [(U,180), (R,80), (L,80), (D,60)] 
+       mygaps        = gaps [(U,180), (R,80), (L,80), (D,60)]
        mainGaps      = mygaps tiled
        secondaryGaps = mygaps spiralLayout
        fullGaps      = mygaps Full
@@ -102,7 +103,7 @@ myManageHook = composeAll
 
 myXmonadBar, myStatusBar :: String
 myXmonadBar = "dzen2 -x '80' -y '60' -h '80' -w '2000' -ta 'l' -fg '"++ foreground ++
-              "' -bg '"  ++ background ++ "' -fn "++myFont
+              "' -bg '"  ++ background ++ "' -fn " ++ myFont
 myStatusBar = "/home/tom/.xmonad/status_bar '" ++ blue ++ "' '" ++ background ++ "' " ++ myFont
 
 main :: IO ()
@@ -144,10 +145,10 @@ defaults = defaultConfig {
 -- PP that determines what is being outputted to the Bar
 myPP :: PP
 myPP = dzenPP {
-        ppCurrent = dzenColor bg blue . pad 
+        ppCurrent = dzenColor bg blue . pad
       , ppVisible = dzenColor blue bg . pad
       , ppHidden = dzenColor blue bg . pad
-      , ppHiddenNoWindows = dzenColor bg3 bg . pad 
+      , ppHiddenNoWindows = dzenColor bg3 bg . pad
       , ppWsSep = ""
       , ppSep =  "|"
       , ppLayout = wrap "^ca(1,xdotool key super+space)" "^ca()" .
