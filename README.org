@@ -16,4 +16,5 @@ extending.
 
 [[./empty_large.png]]
 
-
+Dmenu to run programs:
+[[./dmenu_large.png]]
