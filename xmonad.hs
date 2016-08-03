@@ -36,6 +36,10 @@ myWorkspaces = clickable ["I", "II", "III", "IV", "V"]
   where clickable l = [ "^ca(1,xdotool key super+" ++ show n ++ ")" ++ ws ++ "^ca()" |
                         (i,ws) <- zip [1..] l,
                                  let n = i ]
+
+myFormats :: String -> String
+myFormats _ = "smart spacing"
+myFormats cs = cs
 --------------------------------------------------------------------------
 
 -- Width of the window border in pixels.
@@ -57,6 +61,9 @@ myDisplayBrightnessUp    = "xbacklight -inc 5" -- && backlight_popup.sh"
 myDisplayBrightnessDown  = "xbacklight -dec 5" -- && backlight_popup.sh"
 myTerminal               = "/usr/bin/urxvt -e zsh"
 
+dmenu :: String
+dmenu = "~/.xmonad/run_dmenu"
+
 myFocusFollowsMouse :: Bool
 myFocusFollowsMouse = False
 
@@ -70,7 +77,7 @@ myLayout =  avoidStruts $  smartBorders (mainGaps
                                          ||| spiralLayout
                                          ||| Full )
      where
-       mygaps        = gaps [(U,180), (R,80), (L,80), (D,60)] 
+       mygaps        = gaps [(U,180), (R,80), (L,80), (D,60)]
        mainGaps      = mygaps tiled
        secondaryGaps = mygaps spiralLayout
        fullGaps      = mygaps Full
@@ -79,7 +86,6 @@ myLayout =  avoidStruts $  smartBorders (mainGaps
        nmaster       = 1    -- The default number of windows in the master pane
        ratio         = 1/2    -- Default proportion of screen occupied by master pane
        delta         = 3/100  -- Percent of screen to increment by when resizing panes
-       
 
 myManageHook :: Query (Data.Monoid.Endo WindowSet)
 myManageHook = composeAll
@@ -95,13 +101,13 @@ myManageHook = composeAll
 
 myXmonadBar, myStatusBar :: String
 myXmonadBar = "dzen2 -x '80' -y '60' -h '80' -w '2000' -ta 'l' -fg '"++ foreground ++
-              "' -bg '"  ++ background ++ "' -fn "++myFont
+              "' -bg '"  ++ background ++ "' -fn " ++ myFont
 myStatusBar = "/home/tom/.xmonad/status_bar '" ++ blue ++ "' '" ++ background ++ "' " ++ myFont
-                
+
 main :: IO ()
 main = do
 --  dzenLeftBar <- spawnPipe myXmonadBar
-  dzenRightBar <- spawnPipe myStatusBar    
+  dzenRightBar <- spawnPipe myStatusBar
   spawn "feh --randomize --bg-scale /home/tom/Pictures/Wallpapers/4K/* &"
   spawn "systemctl start wicd"
   spawn "systemctl enable wicd"
@@ -137,10 +143,10 @@ defaults = defaultConfig {
 -- PP that determines what is being outputted to the Bar
 myPP :: PP
 myPP = dzenPP {
-        ppCurrent = dzenColor bg blue . pad 
+        ppCurrent = dzenColor bg blue . pad
       , ppVisible = dzenColor blue bg . pad
       , ppHidden = dzenColor blue bg . pad
-      , ppHiddenNoWindows = dzenColor bg3 bg . pad 
+      , ppHiddenNoWindows = dzenColor bg3 bg . pad
       , ppWsSep = ""
       , ppSep =  "|"
       , ppLayout = wrap "^ca(1,xdotool key super+space)" "^ca()" .
@@ -173,21 +179,21 @@ morekeys = [
 --       ((mod4Mask, xK_x), spawn "albert"),
        --toggle spaces in between windows
        ((mod4Mask, xK_b), sendMessage ToggleStruts),
-
+       ((mod4Mask, xK_p), spawn dmenu),
        --my volume control
        ((0, 0x1008FF11), spawn myVolumeDown),
        ((0, 0x1008FF13), spawn myVolumeUp),
        ((0, 0x1008FF12), spawn myToggleMute),
        ((0, xF86XK_MonBrightnessUp), spawn myDisplayBrightnessUp),
        ((0, xF86XK_MonBrightnessDown), spawn myDisplayBrightnessDown),
-       
+
        --systen stuff ie logout, suspend, etc.
        ((mod4Mask .|. shiftMask, xK_l), spawn "systemctl logout"),
        ((mod4Mask .|. shiftMask, xK_s), spawn "systemctl suspend"),
        ((mod4Mask .|. shiftMask, xK_h), spawn "systemctl hibernate"),
 --       ((myModMask, xK_e) , runOrRaise emacs (className =? "Emacs")),
        ((myModMask , xK_f), runOrRaise myBrowser (className =? "Firefox")),
-       
+
        --switch workspaces
        ((mod4Mask .|. controlMask, xK_Right), shiftToNext >> nextWS),
        ((mod4Mask .|. controlMask, xK_Left),   shiftToPrev >> prevWS)
@@ -204,13 +210,13 @@ myFont = "xft:DejavuSansMonoforPowerline:style=Semibold:pixelsize=30:antialias=t
 -- myFont = "-*-terminus-medium-*-normal-*-30-*-*-*-*-*-*-*"
 --myFont = "-*-nu-*-*-*-*-*-*-*-*-*-*-*-*"
 myFont2  ="-*-tamsyn-medium-r-normal-*-12-*-*-*-*-*-*-1"
--- GruvBox EDIT
+-- GruvBxo EDIT
 
 background = "#282828"
 foreground = "#ebdbb2"
 
 
-bg = "#282828"     -- 0            
+bg = "#282828"     -- 0
 
 red = "#cc241d"    -- 1
 green = "#98971a"  -- 2

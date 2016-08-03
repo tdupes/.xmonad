@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Check to see if external is connected, if it is, we assume its 4K 
+if [[ -n `xrandr | grep " connected" | grep "^DP1"` ]]; then
+	 dmenu_run -fn 'Dejavu Sans Mono for Powerline' -nb '#282828' -nf '#ebdbb2' -x 80 -y 60 -w '3680' -h '80' -p \> -q	
+else
+	 dmenu_run -fn 'Dejavu Sans Mono for Powerline' -nb '#282828' -nf '#ebdbb2' -x 80 -y 60 -w '3040' -h '80' -p \> -q
+fi

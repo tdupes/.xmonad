@@ -6,6 +6,6 @@ font=$3
 # Check to see if external is connected, if it is, we assume its 4K 
 if [[ -n `xrandr | grep " connected" | grep "^DP1"` ]]; then
 		conky -qc /home/tom/.xmonad/.conky_dzen | dzen2 -x '2000' -w '1760' -h '80'  -ta 'r' -bg $background -fg $foreground -y '60' -fn $font -dock &
-else 
+else
 		conky -qc /home/tom/.xmonad/.conky_dzen | dzen2 -x '2000' -w '1120' -h '80' -ta 'r' -bg $background -fg $foreground -y '60' -fn $font -dock &
 fi
